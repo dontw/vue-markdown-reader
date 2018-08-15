@@ -1,5 +1,5 @@
 {
-  "name": "starlux-nuxt-project",
+  "name": "console-frontend",
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "chen-yu hsieh",
@@ -13,8 +13,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "github-markdown-css": "^2.10.0",
     "iview": "^3.0.0",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

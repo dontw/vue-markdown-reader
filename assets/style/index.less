@@ -3,6 +3,31 @@
 
 // VENDORS
 @import '~iview/src/styles/index.less';
-@primary-color: green;
+@import '~github-markdown-css/github-markdown.css';
+
+//VARIABLES
+@import '_var';
+
+:root {
+  scroll-behavior: smooth;
+}
+
+.toc {
+  ol,
+  ul {
+    padding: 0 25px;
+    li {
+      padding-left: 0px;
+    }
+  }
+}
+
+.ivu-layout-sider {
+  background: none;
+}
+
+.ivu-layout-sider-children {
+  background: #fff;
+}
 //SETTINGS
 @import '_example_style_module';

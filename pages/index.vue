@@ -1,38 +1,89 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <div class="wrap">
-          <Button>Default</Button>
-          <Button type="primary">Primary</Button>
-          <Button type="dashed">Dashed</Button>
-          <Button type="text">Text</Button>
-          <br><br>
-          <Button type="info">Info</Button>
-          <Button type="success">Success</Button>
-          <Button type="warning">Warning</Button>
-          <Button type="error">Error</Button>
-      </div>
-
-    </div>
-  </section>
+  <div>
+    <Layout :style="{minHeight: '100vh'}">
+      <Layout>
+          <AppNav @emitMenuItemName="getSiderItems"></AppNav>
+          <Layout>
+            <Sider breakpoint="md" :collapsed-width="78">
+              <AppMenu :items="siderItems" @emitItemName="getContent"></AppMenu>
+            </Sider>
+            <Content :style="{padding: '16px', 'display':'flex','align-items':'center','justify-content':'center'}">
+                <Card shadow :style="{minHeight:'87.5vh', width:'100%', padding:'5px'}">
+                    <div v-if="contentList" v-html="contentList" class="toc list"></div>
+                    <VueMarkdown
+                      v-if="cardContent"
+                      class="markdown-body"
+                      :toc="true"
+                      :toc-first-level="1"
+                      :toc-last-level="4"
+                      :source="cardContent"
+                      @toc-rendered="getTocHtml"
+                    />
+                </Card>
+            </Content>
+          </Layout>
+      </Layout>
+    </Layout>
+  </div>
 </template>
-
 <script>
-import AppLogo from '~/components/AppLogo.vue';
-
+import AppNav from '~/components/AppNav';
+import AppMenu from '~/components/AppMenu';
 export default {
   components: {
-    AppLogo,
+    AppNav,
+    AppMenu,
   },
-  methods: {},
+
+  data() {
+    return {
+      tocHtml: null,
+    };
+  },
+
+  computed: {
+    siderItems() {
+      return this.$store.state.siderItems;
+    },
+
+    cardContent() {
+      return this.$store.state.cardContent;
+    },
+
+    contentList() {
+      return this.tocHtml;
+    },
+  },
+  methods: {
+    getSiderItems(name) {
+      this.$store.dispatch('getSiderItems', name);
+    },
+
+    getContent(name) {
+      this.$store.dispatch('getContent', name);
+    },
+
+    getTocHtml(val) {
+      if (val) {
+        this.tocHtml = val;
+      } else {
+        this.tocHtml = null;
+      }
+    },
+  },
 };
 </script>
-
 <style lang="less" scoped>
-.title {
-  background: linear-gradient(#e66465, #9198e5);
+.list {
+  width: 300px;
+  position: fixed;
+  right: 30px;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px;
 }
 </style>
-
-

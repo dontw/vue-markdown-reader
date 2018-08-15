@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'spa',
   //Headers of the page
   head: {
     title: 'nuxt-projext-sample',
@@ -19,7 +20,10 @@ module.exports = {
   ],
 
   //Plugins
-  plugins: [{ src: '@plugins/iview.js' }],
+  plugins: [{ src: '@plugins/iview.js' }, { src: '@plugins/markdown.js' }],
+
+  //Nuxt Modules
+  modules: ['@nuxtjs/axios'],
 
   //Customize the progress bar color
   loading: { color: '#3B8070' },
