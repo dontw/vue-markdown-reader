@@ -44,4 +44,9 @@ module.exports = {
 
     postcss: [require('autoprefixer')()],
   },
+  //ENV VAR
+  env: {
+    API_URL:
+      process.env.API_URL || 'http://10.20.41.101:3000/console/api/catalog/',
+  },
 };

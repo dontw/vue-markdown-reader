@@ -1,7 +1,8 @@
 export const state = () => ({
   navStatus: 'home', //String
-  siderItems: null, //Array
-  cardContent: null, //String
+  siderItems: { data: [], type: null }, //Object
+  cardContent: '<h2>HOME</h2>', //String
+  tableContent: null, //String
 });
 
 export const mutations = {
@@ -14,7 +15,7 @@ export const mutations = {
   },
 
   clearSiderItems(state) {
-    state.siderItemName = null;
+    state.siderItemName = { data: [], type: null };
   },
 
   setCardContent(state, content) {
@@ -24,19 +25,29 @@ export const mutations = {
   clearCardContent(state) {
     state.cardContent = null;
   },
+
+  setTableContent(state, content) {
+    state.tableContent = content;
+  },
+
+  clearTableContent(state) {
+    state.tableContent = null;
+  },
 };
 
 export const actions = {
   getSiderItems({ commit }, navStatusName) {
     commit('clearCardContent');
     commit('clearSiderItems');
+    commit('clearTableContent');
     commit('setNavStatus', navStatusName);
 
     if (navStatusName === 'guides') {
       this.$axios
         .$get('/markdown/mdconfig.json')
-        .then((items) => {
-          commit('setSiderItems', items.names);
+        .then((res) => {
+          commit('setSiderItems', { data: res.names, type: 'md' });
+          commit('setCardContent', '<h2>GUIDES</h2>');
         })
         .catch((err) => {
           console.log(err);
@@ -44,11 +55,15 @@ export const actions = {
     }
 
     if (navStatusName === 'apis') {
-      commit('setSiderItems', ['test1', 'test2', 'test3']);
+      this.$axios.$get(process.env.API_URL + 'API').then((res) => {
+        console.log('result', changeName(res));
+        // commit('setSiderItems', { data: newRes, type: 'api' });
+      });
     }
 
     if (navStatusName === 'home') {
-      commit('setSiderItems', null);
+      commit('clearSiderItems');
+      commit('setCardContent', '<h2>HOME</h2>');
     }
   },
 
@@ -64,3 +79,16 @@ export const actions = {
     }
   },
 };
+
+function changeName(arr) {
+  let tempArr = {};
+  let result = [];
+  arr.forEach((item) => {
+    tempArr.title = item.name;
+    if (item.items) {
+      tempArr.children = changeName(item.items);
+    }
+    result.push(tempArr);
+  });
+  return result;
+}

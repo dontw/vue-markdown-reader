@@ -1,6 +1,7 @@
 <template>
   <Menu active-name="1" theme="light" width="auto" @on-select="emitItem">
-      <i-menuItem v-for="(val, key) in items" :key="key" :name="val">
+      <div>{{navStatus}}</div>
+      <i-menuItem v-for="(val, key) in items.data" :key="key" :name="val">
         <span>{{val | capitalize}}</span>
       </i-menuItem>
   </Menu>
@@ -9,7 +10,13 @@
 import { MenuItem } from 'iview';
 export default {
   props: {
-    items: Array,
+    items: {
+      type: Object,
+    },
+
+    navStatus: {
+      type: String,
+    },
   },
 
   filters: {

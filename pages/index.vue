@@ -5,7 +5,7 @@
           <AppNav @emitMenuItemName="getSiderItems"></AppNav>
           <Layout>
             <Sider breakpoint="md" :collapsed-width="78">
-              <AppMenu :items="siderItems" @emitItemName="getContent"></AppMenu>
+              <AppMenu :items="siderItems" :navStatus="navStatus" @emitItemName="getContent"></AppMenu>
             </Sider>
             <Content :style="{padding: '16px', 'display':'flex','align-items':'center','justify-content':'center'}">
                 <Card shadow :style="{minHeight:'87.5vh', width:'100%', padding:'5px'}">
@@ -51,7 +51,11 @@ export default {
     },
 
     contentList() {
-      return this.tocHtml;
+      return this.$store.state.tableContent;
+    },
+
+    navStatus() {
+      return this.$store.state.navStatus;
     },
   },
   methods: {
@@ -64,11 +68,7 @@ export default {
     },
 
     getTocHtml(val) {
-      if (val) {
-        this.tocHtml = val;
-      } else {
-        this.tocHtml = null;
-      }
+      this.$store.commit('setTableContent', val);
     },
   },
 };
