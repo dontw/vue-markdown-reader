@@ -11,11 +11,11 @@
             </i-menuItem>
             <i-menuItem name="guides">
                 <Icon type="md-book" />
-                Style Guides
+                Guides
             </i-menuItem>
             <i-menuItem name="apis">
                 <Icon type="md-cog" />
-                APIs
+                API Websites
             </i-menuItem>
             <i-menuItem name="gitlab" to="http://git.starlux-airlines.com/" target="_blank">
               <Icon type="md-git-network" />
@@ -48,7 +48,7 @@ export default {
   left: 20px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #3b8070;
+  color: #41b883;
 }
 .layout-nav {
   float: right;

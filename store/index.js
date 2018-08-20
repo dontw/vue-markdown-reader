@@ -5,6 +5,21 @@ export const state = () => ({
   tableContent: null, //String
 });
 
+export const getters = {
+  getSiderItems(state) {
+    if (state.siderItems.type === 'tree') {
+      return {
+        data: JSON.parse(
+          JSON.stringify(formatTreeObjectName(state.siderItems.data)),
+        ),
+        type: 'tree',
+      };
+    }
+
+    return state.siderItems;
+  },
+};
+
 export const mutations = {
   setNavStatus(state, stateName) {
     state.navStatus = stateName;
@@ -56,8 +71,10 @@ export const actions = {
 
     if (navStatusName === 'apis') {
       this.$axios.$get(process.env.API_URL + 'API').then((res) => {
-        console.log('result', changeName(res));
-        // commit('setSiderItems', { data: newRes, type: 'api' });
+        commit('setSiderItems', {
+          data: res,
+          type: 'tree',
+        });
       });
     }
 
@@ -67,9 +84,9 @@ export const actions = {
     }
   },
 
-  getContent({ commit }, siderItemName) {
+  getContent({ commit, state }, siderItemName) {
     commit('clearCardContent');
-    if (siderItemName) {
+    if (state.siderItems.type === 'md') {
       this.$axios
         .$get(`/markdown/${siderItemName}.md`)
         .then((res) => {
@@ -77,17 +94,25 @@ export const actions = {
         })
         .catch((err) => console.log(err));
     }
+
+    if (state.siderItems.type === 'tree') {
+      commit('setCardContent', siderItemName);
+    }
   },
 };
 
-function changeName(arr) {
-  let tempArr = {};
+function formatTreeObjectName(arr) {
   let result = [];
   arr.forEach((item) => {
+    let tempArr = {};
     tempArr.title = item.name;
+    tempArr.link = item.link;
+    tempArr.expand = true;
     if (item.items) {
-      tempArr.children = changeName(item.items);
+      tempArr.children = formatTreeObjectName(item.items);
     }
+    console.log('temp', tempArr);
+
     result.push(tempArr);
   });
   return result;

@@ -47,6 +47,6 @@ module.exports = {
   //ENV VAR
   env: {
     API_URL:
-      process.env.API_URL || 'http://10.20.41.101:3000/console/api/catalog/',
+      process.env.API_URL || 'http://10.20.43.121:3000/console/api/catalog/',
   },
 };
