@@ -1,21 +1,17 @@
 <template>
-    <Menu mode="horizontal" theme="light" active-name="home" class="menu" @on-select="emitItem">
+    <Menu mode="horizontal" theme="light" active-name="guides" class="menu" @on-select="emitItem">
           <div class="layout-logo">
             <Icon type="md-code" size="32" style="padding-bottom:5px;"/>
             Starlux Console
           </div>
           <div class="layout-nav">
-            <i-menuItem name="home">
-                <Icon type="md-home" />
-                Home
-            </i-menuItem>
             <i-menuItem name="guides">
                 <Icon type="md-book" />
-                Style Guides
+                Guides
             </i-menuItem>
             <i-menuItem name="apis">
                 <Icon type="md-cog" />
-                APIs
+                API Websites
             </i-menuItem>
             <i-menuItem name="gitlab" to="http://git.starlux-airlines.com/" target="_blank">
               <Icon type="md-git-network" />
@@ -48,7 +44,7 @@ export default {
   left: 20px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #3b8070;
+  color: #41b883;
 }
 .layout-nav {
   float: right;

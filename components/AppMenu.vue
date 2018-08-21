@@ -1,9 +1,9 @@
 <template>
   <Menu active-name="1" theme="light" width="auto" @on-select="emitItem">
-      <div>{{navStatus}}</div>
-      <i-menuItem v-for="(val, key) in items.data" :key="key" :name="val">
+      <i-menuItem v-if="items.type === 'md'" v-for="(val, key) in items.data" :key="key" :name="val">
         <span>{{val | capitalize}}</span>
       </i-menuItem>
+      <Tree v-if="items.type === 'tree'" :data="items.data" @on-select-change="emitItem"></Tree>
   </Menu>
 </template>
 <script>
@@ -12,10 +12,6 @@ export default {
   props: {
     items: {
       type: Object,
-    },
-
-    navStatus: {
-      type: String,
     },
   },
 
@@ -33,6 +29,9 @@ export default {
 
   methods: {
     emitItem(name) {
+      if (name.length === 0) {
+        return;
+      }
       this.$emit('emitItemName', name);
     },
   },

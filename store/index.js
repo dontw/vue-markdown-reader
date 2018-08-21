@@ -1,9 +1,24 @@
 export const state = () => ({
-  navStatus: 'home', //String
+  navStatus: null, //String
   siderItems: { data: [], type: null }, //Object
-  cardContent: '<h2>HOME</h2>', //String
+  cardContent: null, //String
   tableContent: null, //String
 });
+
+export const getters = {
+  getSiderItems(state) {
+    if (state.siderItems.type === 'tree') {
+      return {
+        data: JSON.parse(
+          JSON.stringify(formatTreeObjectName(state.siderItems.data)),
+        ),
+        type: 'tree',
+      };
+    }
+
+    return state.siderItems;
+  },
+};
 
 export const mutations = {
   setNavStatus(state, stateName) {
@@ -15,7 +30,7 @@ export const mutations = {
   },
 
   clearSiderItems(state) {
-    state.siderItemName = { data: [], type: null };
+    state.siderItems = { data: [], type: null };
   },
 
   setCardContent(state, content) {
@@ -47,7 +62,10 @@ export const actions = {
         .$get('/markdown/mdconfig.json')
         .then((res) => {
           commit('setSiderItems', { data: res.names, type: 'md' });
-          commit('setCardContent', '<h2>GUIDES</h2>');
+          commit(
+            'setCardContent',
+            '<h2>GUIDES</h2> <---- Choose Your Guides :D :D :D :D :D',
+          );
         })
         .catch((err) => {
           console.log(err);
@@ -56,20 +74,22 @@ export const actions = {
 
     if (navStatusName === 'apis') {
       this.$axios.$get(process.env.API_URL + 'API').then((res) => {
-        console.log('result', changeName(res));
-        // commit('setSiderItems', { data: newRes, type: 'api' });
+        commit('setSiderItems', {
+          data: res,
+          type: 'tree',
+        });
       });
     }
 
     if (navStatusName === 'home') {
+      console.log('honme');
       commit('clearSiderItems');
-      commit('setCardContent', '<h2>HOME</h2>');
     }
   },
 
-  getContent({ commit }, siderItemName) {
+  getContent({ commit, state }, siderItemName) {
     commit('clearCardContent');
-    if (siderItemName) {
+    if (state.siderItems.type === 'md') {
       this.$axios
         .$get(`/markdown/${siderItemName}.md`)
         .then((res) => {
@@ -77,16 +97,22 @@ export const actions = {
         })
         .catch((err) => console.log(err));
     }
+
+    if (state.siderItems.type === 'tree') {
+      commit('setCardContent', siderItemName);
+    }
   },
 };
 
-function changeName(arr) {
-  let tempArr = {};
+function formatTreeObjectName(arr) {
   let result = [];
   arr.forEach((item) => {
+    let tempArr = {};
     tempArr.title = item.name;
+    tempArr.link = item.link;
+    tempArr.expand = true;
     if (item.items) {
-      tempArr.children = changeName(item.items);
+      tempArr.children = formatTreeObjectName(item.items);
     }
     result.push(tempArr);
   });
