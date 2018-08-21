@@ -1,7 +1,7 @@
 export const state = () => ({
-  navStatus: 'home', //String
+  navStatus: null, //String
   siderItems: { data: [], type: null }, //Object
-  cardContent: '<h2>HOME</h2>', //String
+  cardContent: null, //String
   tableContent: null, //String
 });
 
@@ -30,7 +30,7 @@ export const mutations = {
   },
 
   clearSiderItems(state) {
-    state.siderItemName = { data: [], type: null };
+    state.siderItems = { data: [], type: null };
   },
 
   setCardContent(state, content) {
@@ -62,7 +62,10 @@ export const actions = {
         .$get('/markdown/mdconfig.json')
         .then((res) => {
           commit('setSiderItems', { data: res.names, type: 'md' });
-          commit('setCardContent', '<h2>GUIDES</h2>');
+          commit(
+            'setCardContent',
+            '<h2>GUIDES</h2> <---- Choose Your Guides :D :D :D :D :D',
+          );
         })
         .catch((err) => {
           console.log(err);
@@ -79,8 +82,8 @@ export const actions = {
     }
 
     if (navStatusName === 'home') {
+      console.log('honme');
       commit('clearSiderItems');
-      commit('setCardContent', '<h2>HOME</h2>');
     }
   },
 
@@ -111,8 +114,6 @@ function formatTreeObjectName(arr) {
     if (item.items) {
       tempArr.children = formatTreeObjectName(item.items);
     }
-    console.log('temp', tempArr);
-
     result.push(tempArr);
   });
   return result;

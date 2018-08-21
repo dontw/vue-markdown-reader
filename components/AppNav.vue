@@ -1,14 +1,10 @@
 <template>
-    <Menu mode="horizontal" theme="light" active-name="home" class="menu" @on-select="emitItem">
+    <Menu mode="horizontal" theme="light" active-name="guides" class="menu" @on-select="emitItem">
           <div class="layout-logo">
             <Icon type="md-code" size="32" style="padding-bottom:5px;"/>
             Starlux Console
           </div>
           <div class="layout-nav">
-            <i-menuItem name="home">
-                <Icon type="md-home" />
-                Home
-            </i-menuItem>
             <i-menuItem name="guides">
                 <Icon type="md-book" />
                 Guides

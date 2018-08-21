@@ -42,6 +42,12 @@ export default {
     };
   },
 
+  mounted() {
+    this.$nextTick(() => {
+      this.getSiderItems('guides');
+    });
+  },
+
   computed: {
     siderItems() {
       return this.$store.getters.getSiderItems;
