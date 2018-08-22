@@ -48,5 +48,6 @@ module.exports = {
   env: {
     API_URL:
       process.env.API_URL || 'http://10.20.43.121:3000/console/api/catalog/',
+    SELF_URL: process.env.SELF_URL || 'http://localhost:3000',
   },
 };

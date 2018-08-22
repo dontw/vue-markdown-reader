@@ -59,7 +59,7 @@ export const actions = {
 
     if (navStatusName === 'guides') {
       this.$axios
-        .$get('/markdown/mdconfig.json')
+        .$get(process.env.SELF_URL + '/markdown/mdconfig.json')
         .then((res) => {
           commit('setSiderItems', { data: res.names, type: 'md' });
           commit(
@@ -91,7 +91,7 @@ export const actions = {
     commit('clearCardContent');
     if (state.siderItems.type === 'md') {
       this.$axios
-        .$get(`/markdown/${siderItemName}.md`)
+        .$get(process.env.SELF_URL + `markdown/${siderItemName}.md`)
         .then((res) => {
           commit('setCardContent', res);
         })
