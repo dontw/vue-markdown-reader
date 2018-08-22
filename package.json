@@ -5,7 +5,7 @@
   "author": "chen-yu hsieh",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development HOST=localhost PORT=80 nodemon server/index.js --watch server",
+    "dev": "cross-env SELF_URL=10.20.43.99:3000 NODE_ENV=development HOST=0.0.0.0 PORT=3000 nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "npm run build && cross-env NODE_ENV=production HOST=0.0.0.0 PORT=80 node server/index.js",
     "generate": "nuxt generate",
