@@ -46,8 +46,7 @@ module.exports = {
   },
   //ENV VAR
   env: {
-    API_URL:
-      process.env.API_URL || 'http://10.20.43.121:3000/console/api/catalog/',
-    SELF_URL: process.env.SELF_URL || 'http://localhost:3000',
+    API_URL: process.env.API_URL || 'NO_API_URL',
+    SELF_URL: process.env.SELF_URL || 'NO_SELF_URL',
   },
 };

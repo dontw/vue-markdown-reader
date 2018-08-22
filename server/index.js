@@ -1,6 +1,5 @@
 const express = require('express');
 const { Nuxt, Builder } = require('nuxt');
-const cors = require('cors');
 const app = express();
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
@@ -8,20 +7,6 @@ app.set('port', port);
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js');
 config.dev = !(process.env.NODE_ENV === 'production');
-app.use(
-  cors({
-    origin: ['http://localhost', 'https://10.20.43.121:8080'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: [
-      'Origin',
-      'X-Requested-With',
-      'Content-Type',
-      'Accept',
-      'Authorization',
-    ],
-    credentials: true,
-  }),
-);
 async function start() {
   // Init Nuxt.js
   const nuxt = new Nuxt(config);
