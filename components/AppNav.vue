@@ -1,7 +1,7 @@
 <template>
     <Menu mode="horizontal" theme="light" active-name="guides" class="menu" @on-select="emitItem">
           <div class="layout-logo">
-            <Icon type="md-code" size="32" style="padding-bottom:5px;"/>
+            <img src="/icon_120x120.png" alt="icon">
             Starlux Console
           </div>
           <div class="layout-nav">
@@ -49,6 +49,13 @@ export default {
 .layout-nav {
   float: right;
   margin-right: 20px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-bottom: 3px;
 }
 </style>
 
