@@ -2,7 +2,7 @@ module.exports = {
   mode: 'spa',
   //Headers of the page
   head: {
-    title: 'nuxt-projext-sample',
+    title: 'Starlux Console',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

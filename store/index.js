@@ -74,7 +74,8 @@ export const actions = {
     }
 
     if (navStatusName === 'apis') {
-      this.$axios.defaults.baseURL = process.env.API_URL;
+      this.$axios.defaults.baseURL =
+        'http://' + process.env.API_URL + '/console/api/catalog/';
       this.$axios.$get('API').then((res) => {
         commit('setSiderItems', {
           data: res,
