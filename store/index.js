@@ -58,7 +58,6 @@ export const actions = {
     commit('setNavStatus', navStatusName);
 
     if (navStatusName === 'guides') {
-      this.$axios.defaults.baseURL = 'http://' + process.env.SELF_URL + '/';
       this.$axios
         .$get('/markdown/mdconfig.json')
         .then((res) => {
@@ -74,8 +73,6 @@ export const actions = {
     }
 
     if (navStatusName === 'apis') {
-      this.$axios.defaults.baseURL =
-        'http://' + process.env.API_URL + '/console/api/catalog/';
       this.$axios.$get('API').then((res) => {
         commit('setSiderItems', {
           data: res,
@@ -92,7 +89,6 @@ export const actions = {
   getContent({ commit, state }, siderItemName) {
     commit('clearCardContent');
     if (state.siderItems.type === 'md') {
-      this.$axios.defaults.baseURL = 'http://' + process.env.SELF_URL + '/';
       this.$axios
         .$get(`markdown/${siderItemName}.md`)
         .then((res) => {

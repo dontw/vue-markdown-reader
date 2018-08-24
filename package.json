@@ -6,9 +6,9 @@
   "private": true,
   "main": "server/index.js",
   "scripts": {
-    "dev": "cross-env SELF_URL=localhost:9487 NODE_ENV=development HOST=localhost PORT=9487 nodemon server/index.js --watch server",
-    "build": "cross-env SELF_URL=10.20.43.121:8080 NODE_ENV=production HOST=0.0.0.0 PORT=8080 nuxt build",
-    "start": "npm run build && cross-env SELF_URL=10.20.43.121:8080 NODE_ENV=production HOST=0.0.0.0 PORT=8080 node server/index.js",
+    "dev": "cross-env NODE_ENV=development HOST=10.20.43.99 PORT=1234  nodemon server/index.js --watch server",
+    "build": "cross-env NODE_ENV=production HOST=0.0.0.0 PORT=8080 nuxt build",
+    "start": "npm run build && cross-env NODE_ENV=production HOST=0.0.0.0 PORT=8080 node server/index.js",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",

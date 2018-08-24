@@ -44,9 +44,4 @@ module.exports = {
 
     postcss: [require('autoprefixer')()],
   },
-  //ENV VAR
-  env: {
-    API_URL: process.env.API_URL || 'NO_API_URL',
-    SELF_URL: process.env.SELF_URL || 'NO_SELF_URL',
-  },
 };

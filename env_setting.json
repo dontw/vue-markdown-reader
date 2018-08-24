@@ -1,0 +1,12 @@
+{
+  "development": {
+    "HOST": "10.20.43.99",
+    "PORT": "1234",
+    "API_HOST": "426.426.426.426",
+    "API_PORT": "0857"
+  },
+
+  "production": {},
+
+  "deploy": {}
+}
