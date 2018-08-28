@@ -1,7 +1,7 @@
 const express = require('express');
 const { Nuxt, Builder } = require('nuxt');
 const app = express();
-const ENV_SETTING = require('../env_setting.json');
+const ENV_SETTING = require('../env_setting');
 const CURRENT_ENV = process.env.NODE_ENV;
 const host = ENV_SETTING[CURRENT_ENV].HOST;
 const port = ENV_SETTING[CURRENT_ENV].PORT;
@@ -11,8 +11,6 @@ app.set('port', port);
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js');
 config.dev = !(process.env.NODE_ENV === 'production');
-
-console.log('config', config);
 
 async function start() {
   // Init Nuxt.js

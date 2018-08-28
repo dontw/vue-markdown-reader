@@ -1,3 +1,5 @@
+const ENV_SETTING = require('./env_setting.js');
+console.log('env_setting', ENV_SETTING[process.env.NODE_ENV].NUXT_HOST);
 module.exports = {
   mode: 'spa',
   //Headers of the page
@@ -43,5 +45,13 @@ module.exports = {
     },
 
     postcss: [require('autoprefixer')()],
+  },
+
+  env: {
+    PROTOCAL: ENV_SETTING[process.env.NODE_ENV].PROTOCAL,
+    NUXT_HOST: ENV_SETTING[process.env.NODE_ENV].NUXT_HOST,
+    NUXT_PORT: ENV_SETTING[process.env.NODE_ENV].NUXT_PORT,
+    API_HOST: ENV_SETTING[process.env.NODE_ENV].API_HOST,
+    API_PORT: ENV_SETTING[process.env.NODE_ENV].API_PORT,
   },
 };
