@@ -13,6 +13,7 @@
                     <VueMarkdown
                       v-if="cardContent && navStatus ==='guides'"
                       class="markdown-body"
+                      lang-prefix="language-"
                       :toc="true"
                       :toc-first-level="1"
                       :toc-last-level="4"
@@ -30,6 +31,8 @@
 <script>
 import AppNav from '~/components/AppNav';
 import AppMenu from '~/components/AppMenu';
+import Prism from 'prismjs';
+
 export default {
   components: {
     AppNav,
@@ -84,7 +87,8 @@ export default {
   },
 };
 </script>
-<style lang="less" scoped>
+<style lang="less">
+@import '../node_modules/prismjs/themes/prism.css';
 .list {
   width: 300px;
   position: fixed;

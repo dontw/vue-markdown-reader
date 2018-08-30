@@ -1,6 +1,7 @@
 # recruiter api
 
 ## POST register
+
 ```json
 {
   "email": "xxx@starlux-airlines.com",
@@ -9,6 +10,7 @@
 ```
 
 ## POST validate
+
 ```json
 {
   "id": "xxxx-xxxx-xxxx",
@@ -17,6 +19,7 @@
 ```
 
 ## POST login
+
 ```json
 {
   "email": "xxx@starlux-airlines.com",
@@ -25,6 +28,7 @@
 ```
 
 ## POST password
+
 ```json
 {
   "password": "abcd1234",
@@ -35,6 +39,7 @@
 ## GET interview
 
 ## GET/POST/PUT resume/:jobs
+
 ```json
 {
   "lastName": "小明",
