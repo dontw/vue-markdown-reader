@@ -1,17 +1,15 @@
 # Colors 暫時用企業配色
 
-![alt text](https://eastasia1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Fstarluxairlines-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!5kPxPfTOikWbdzbae3LbV0GosUdTlQlBhlFFNFXVjlAZWiAEJAkNToDsSulkKa4V%2Fitems%2F01JRB2SWXTF5LGYDSSUBE2HS7SXCVNMGII%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7B6C562FF3-520E-49A0-A3CB-F2B8AAD61908%7D%2C2%22&width=1922&height=915&srcWidth=&srcHeight= 'color theme')
-
 ## 主色
 
-咖啡 (#95684B)
+<div style="background-color:#95684B; height:50px; color:white; margin-bottom:5px;"> #95684B </div>
 
-黃金 (#84754C)
+<div style="background-color:#84754C; height:50px; color:white; margin-bottom:5px;" > #84754C </div>
 
-藍黑 (#40454B)
+<div style="background-color:#40454B; height:50px; color:white; margin-bottom:5px;"> #40454B </div>
 
 ## 相反色
 
-青 (#60B5B5)
+<div style="background-color:#60B5B5; height:50px; color:white; margin-bottom:5px;">#60B5B5</div>
 
-藍 (#6C89D4)
+<div style="background-color:#6C89D4; height:50px; color:white; margin-bottom:5px;">#6C89D4</div>
