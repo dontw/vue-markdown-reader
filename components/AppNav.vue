@@ -13,7 +13,7 @@
                 <Icon type="md-cog" />
                 API Websites
             </i-menuItem>
-            <i-menuItem name="gitlab" to="http://git.starlux-airlines.com/" target="_blank">
+            <i-menuItem name="gitlab" to="http://gitlab.starlux-airlines.com/" target="_blank">
               <Icon type="md-git-network" />
               Git Lab
             </i-menuItem>

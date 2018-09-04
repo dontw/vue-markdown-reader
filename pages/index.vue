@@ -50,6 +50,10 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.getSiderItems('guides');
+      if (!this.isObjectEmpty(this.$route.query)) {
+        this.$store.commit('setSiderItems', this.$route.query);
+        this.$store.dispatch('getContent', this.$route.query.name);
+      }
     });
   },
 
@@ -71,6 +75,10 @@ export default {
     },
   },
   methods: {
+    isObjectEmpty(obj) {
+      return Object.keys(obj).length === 0 && obj.constructor === Object;
+    },
+
     toggleToc() {
       this.toclistStatus = !this.toclistStatus;
     },
@@ -84,7 +92,8 @@ export default {
         this.$store.dispatch('getContent', name[0].link);
         return;
       }
-      this.$store.dispatch('getContent', name);
+      window.location.href = `/?name=${name}&type=md`;
+      // this.$store.dispatch('getContent', name);
     },
 
     getTocHtml(val) {

@@ -1,18 +1,42 @@
-# Name Rule
+# General Name Rule
 
-> function: brianBigBoob
+## variable
 
-> table name: BrianBigBoob
+一般 variable - 小駝峰
 
-> columns name: brian_big_boob
-
-> const: BRIAN_BIG_BOOB
-
-> var: brianBigBoob
-
-> space
-
+```lang=javascript
+var brianBoobSize = "big";
 ```
-php: 4
-javascript: 2
+
+常數 const - 大寫加底線
+
+```lang=javascript
+const BRIAN_BOOB_NUM = 2;
 ```
+
+## function
+
+一般 function - 小駝峰
+
+```lang=javascript
+function isBrainBigBoob(){
+  //...
+};
+```
+
+## table name
+
+大駝峰
+
+> BrianBigBoob
+
+## columns name
+
+小寫加底線
+
+> brian_big_boob
+
+## spacing
+
+> php: 4
+> javascript: 2
