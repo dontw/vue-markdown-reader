@@ -19,7 +19,6 @@
     "github-markdown-css": "^2.10.0",
     "iview": "^3.0.0",
     "nuxt": "^1.0.0",
-    "prismjs": "^1.15.0",
     "vue-markdown": "^2.2.4"
   },
   "devDependencies": {

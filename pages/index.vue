@@ -103,7 +103,6 @@ export default {
 };
 </script>
 <style lang="less">
-@import '../node_modules/prismjs/themes/prism.css';
 .list {
   width: 300px;
   position: fixed;
