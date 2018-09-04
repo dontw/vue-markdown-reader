@@ -21,7 +21,6 @@ export const getters = {
         type: 'tree',
       };
     }
-
     return state.siderItems;
   },
 };
@@ -79,7 +78,6 @@ export const actions = {
     }
 
     if (navStatusName === 'apis') {
-      console.log('api');
       this.$axios
         .$get(`${PROTOCAL}://${API_HOST}:${API_PORT}/console/api/catalog/api`)
         .then((res) => {
