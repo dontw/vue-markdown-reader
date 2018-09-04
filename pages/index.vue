@@ -9,7 +9,9 @@
             </Sider>
             <Content :style="{padding: '12px', 'display':'flex','align-items':'center','justify-content':'center'}">
                 <Card shadow :style="{minHeight:'90.5vh', width:'100%', padding:'5px'}">
-                    <div v-if="contentList" v-html="contentList" class="toc list"></div>
+                    <div v-if="contentList && toclistStatus" class="toc-btn" @click="toggleToc">⮞</div>
+                    <div v-if="contentList&& !toclistStatus" class="toc-btn" @click="toggleToc">⮜</div>
+                    <div v-if="contentList" v-html="contentList" class="toc list" :class="{'list--close':!toclistStatus}"></div>
                     <VueMarkdown
                       v-if="cardContent && navStatus ==='guides'"
                       class="markdown-body"
@@ -31,7 +33,6 @@
 <script>
 import AppNav from '~/components/AppNav';
 import AppMenu from '~/components/AppMenu';
-import Prism from 'prismjs';
 
 export default {
   components: {
@@ -42,6 +43,7 @@ export default {
   data() {
     return {
       tocHtml: null,
+      toclistStatus: true,
     };
   },
 
@@ -69,6 +71,10 @@ export default {
     },
   },
   methods: {
+    toggleToc() {
+      this.toclistStatus = !this.toclistStatus;
+    },
+
     getSiderItems(name) {
       this.$store.dispatch('getSiderItems', name);
     },
@@ -100,6 +106,25 @@ export default {
   border: 1px solid #ccc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
+
+  &--close {
+    right: -330px;
+  }
+}
+
+.toc-btn {
+  position: fixed;
+  right: 30px;
+  top: 60px;
+  background-color: #41b883;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  line-height: 32px;
 }
 
 .iframe {
