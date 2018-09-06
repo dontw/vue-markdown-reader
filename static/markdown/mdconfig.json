@@ -1,3 +1,9 @@
 {
-  "names": ["guides", "front-End Code Style", "colors", "scss", "recruiter"]
+  "names": [
+    "general naming convention",
+    "front-End Code Style",
+    "colors",
+    "scss",
+    "recruiter"
+  ]
 }
