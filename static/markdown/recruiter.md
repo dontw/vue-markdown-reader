@@ -555,16 +555,17 @@
 }
 ```
 
-## GET /jobs
-
-## GET /jobs/:jobsName
-
-## GET /interview
+## GET /jobs?jobType={kind}
 
 ### Request
 
-```
-null
+> header
+
+```json
+{
+  "Authorization": "Bearer [Token]",
+  "Accept-Language": "zh_TW" //or en
+}
 ```
 
 ### Response
@@ -573,25 +574,130 @@ null
 
 ```json
 {
-  "version": 20180831,
+  "version": "20180831",
   "status": true,
-  "message": "OK",
+  "message": "成功",
   "result": {
-    "count": 1,
-    "page": 1,
-    "rowPerPage": 10,
-    "data": [
-      {
-        "date": "2018/09/03 12:00:00",
-        "status": "Application", //應徵中
-        "job": "工程師"
-      }
-    ]
+      "count": 1,
+      "page": 1,
+      "rowPerPage": 15,
+      "data": [
+          {
+            "id": 1,
+            "jobtypeId": 3,
+            "departmentId": 5,
+            "locationId": 1,
+            "name": "工程師",
+            "description": "<p>工程師</p>",
+            "conditions": "<p>工程師</p>",
+            "onBoardDate": "2018-09-30",
+            "numberOfRequire": 3,
+            "approved": "Y",
+            "deadline": null,
+            "createdAt": "2018-09-10 05:40:31",
+            "updatedAt": "2018-09-10 05:41:24",
+            "deletedAt": null
+          }
+      ]
   }
 }
 ```
 
-## GET/POST /resume/:jobs
+
+## GET /jobs/:jobsName(urlencode)
+
+### Request
+
+> header
+
+```json
+{
+  "Authorization": "Bearer [Token]",
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+### Response
+
+`200`
+
+```json
+{
+    "version": "20180831",
+    "status": true,
+    "message": "成功",
+    "result": {
+        "count": 1,
+        "data": {
+            "id": 1,
+            "jobtypeId": 3,
+            "departmentId": 5,
+            "locationId": 1,
+            "name": "工程師",
+            "description": "<p>工程師</p>",
+            "conditions": "<p>工程師</p>",
+            "onBoardDate": "2018-09-30",
+            "numberOfRequire": 3,
+            "approved": "Y",
+            "deadline": null,
+            "createdAt": "2018-09-10 05:40:31",
+            "updatedAt": "2018-09-10 05:41:24",
+            "deletedAt": null
+        }
+    }
+}
+```
+
+`400`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "error",
+  "result": null,
+  "error": {
+    "jobName": ["The jobName is required."]
+  }
+}
+```
+
+## GET /interview
+
+### Request
+
+> header
+
+```json
+{
+  "Authorization": "Bearer [Token]",
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+### Response
+
+`200`
+
+```json
+{
+  "version": "20180831",
+  "status": true,
+  "message": "成功",
+  "result": {
+      "count": 1,
+      "data": [
+          {
+              "date": "2018-09-10 15:10:49",
+              "status": "應徵中",
+              "job": "工程師"
+          }
+      ]
+   }
+}
+```
+
+## GET/POST /resume/:jobTypesKey
 
 ### Request [POST]
 
@@ -628,6 +734,219 @@ null
   }
 }
 ```
+
+## GET/POST /privacies
+
+### Request [POST]
+
+> header
+
+```json
+{
+  "Authorization": "Bearer [Token]",
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+> body
+
+```json
+{
+  "privacyId": {privacyId}
+}
+```
+
+### Request [POST]
+
+`200`
+
+```json
+{
+    "version": "20180831",
+    "status": true,
+    "message": "成功",
+    "result": null
+}
+```
+
+`400`
+
+```json
+{
+    "version": "20180831",
+    "status": false,
+    "message": "儲存隱私權資料失敗",
+    "result": null
+}
+```
+
+### Response [GET]
+
+> header
+
+```json
+{
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+### Request [GET]
+
+`200`
+
+```json
+{
+    "version": "20180831",
+    "status": true,
+    "message": "成功",
+    "result": {
+        "count": 1,
+        "data": {
+            "id": 1,
+            "content": "星宇航空十分重視您的個人隱私權，並遵守個人資料保護法及相關法令之要求，特制定本聲明，以協助您了解本公司網站如何蒐集、應用及保護您的個人資料。",
+            "createdAt": "2018-09-10 06:21:17",
+        }
+    }
+}
+```
+
+## POST /resume/upload
+
+### Request
+
+> header
+
+```json
+{
+  "Authorization": "Bearer [Token]",
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+> body
+
+```json
+{
+  "file": {file},
+  "kind": {kindValue}
+}
+```
+
+### Request
+
+`200`
+
+```json
+{
+    "version": "20180831",
+    "status": true,
+    "message": "成功",
+    "result": null
+}
+```
+
+`400`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "上傳檔案失敗", 
+  "result": null,
+}
+```
+
+`416`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "檔案大小已超過上限",
+  "result": null,
+}
+```
+
+## GET resume/files
+
+### Request
+
+> header
+
+```json
+{
+  "Authorization": "Bearer [Token]",
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+### Request
+
+`200`
+
+```json
+{
+  "version": "20180831",
+  "status": true,
+  "message": "成功",
+  "result": {
+      "count": 1,
+      "data": [
+          {
+             "fileName": "phpr7oyok",
+             "kind": 1,
+             "type": "image/png"
+          }
+      ]
+   }
+}
+```
+
+## GET/DELETE /resume/:fileName
+
+### Request [GET]
+
+> header
+
+```json
+{
+  "Authorization": "Bearer [Token]",
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+### Request [GET]
+
+`200`
+
+```
+images or download pdf
+```
+
+### Request [DELETE]
+
+> header
+
+```json
+{
+  "Authorization": "Bearer [Token]",
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+### Request
+
+`200`
+
+```json
+{
+  "version": "20180831",
+  "status": true,
+  "message": "成功",
+  "result": null
+}
+```
+
 
 # Flow
 
