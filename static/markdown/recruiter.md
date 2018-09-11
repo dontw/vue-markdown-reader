@@ -841,9 +841,9 @@
       "isCPL": false
     }
   ],
-  "recruitingQuesitons": [
+  "recruitingAnswers": [
     {
-      "recruitingQuestionsId": 1,
+      "recruitingQuesitonId": 21,
       "answer": "xxxxxx"
     }
   ]
@@ -1034,6 +1034,16 @@
             "isCPL": 0,
             "createdAt": "2018-09-11 03:37:15",
             "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "recruitingAnswers": [
+          {
+            "id": 4,
+            "resumeId": 13,
+            "recruitingQuesitonId": 21,
+            "answer": "xxxxxx",
+            "createdAt": "2018-09-11 09:02:27",
+            "updatedAt": "2018-09-11 09:02:27"
           }
         ]
       }
@@ -1275,6 +1285,16 @@
             "isCPL": 0,
             "createdAt": "2018-09-11 03:37:15",
             "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "recruitingAnswers": [
+          {
+            "id": 4,
+            "resumeId": 13,
+            "recruitingQuesitonId": 21,
+            "answer": "xxxxxx",
+            "createdAt": "2018-09-11 09:02:27",
+            "updatedAt": "2018-09-11 09:02:27"
           }
         ]
       }
@@ -1549,89 +1569,89 @@ images or download pdf
 
 ```json
 {
-    "version": "20180831",
-    "status": true,
-    "message": "成功",
-    "result": {
-        "data": {
-            "recruitingChannel": {
-                "1": "STARLUX官方網站",
-                "2": "社群媒體",
-                "3": "104",
-                "4": "親戚/朋友",
-                "5": "其他"
-            },
-            "fileKinds": {
-                "1": "大頭照",
-                "2": "畢業證書",
-                "3": "成績單",
-                "4": "語言證照",
-                "5": "機師執照"
-            },
-            "gender": {
-                "1": "男",
-                "2": "女"
-            },
-            "militaryServiceStatus": {
-                "1": "役畢",
-                "2": "免役",
-                "3": "服役中"
-            },
-            "academicDegree": {
-                "1": "博士",
-                "2": "碩士",
-                "3": "學士",
-                "4": "專科"
-            },
-            "academicStatus": {
-                "1": "畢業",
-                "2": "肄業",
-                "3": "在學中"
-            },
-            "language": {
-                "1": "英語",
-                "2": "日語",
-                "3": "法語",
-                "4": "德語",
-                "5": "西班牙語",
-                "6": "其他"
-            },
-            "languageType": {
-                "1": "聽",
-                "2": "說",
-                "3": "讀",
-                "4": "寫"
-            },
-            "languageLicenses": {
-                "1": "多益",
-                "2": "雅思",
-                "3": "托福"
-            },
-            "level": {
-                "1": "精通",
-                "2": "中等",
-                "3": "略懂"
-            },
-            "freightLines": {
-                "1": "國內線",
-                "2": "國際線"
-            },
-            "questionsTypes": {
-                "1": "是非",
-                "2": "單選",
-                "3": "問答"
-            },
-            "status": {
-                "1": "應徵中",
-                "2": "考慮中",
-                "3": "邀請面試",
-                "4": "面試完成",
-                "5": "不合格",
-                "6": "申請任用",
-                "7": "新進人員"
-            }
-        }
+  "version": "20180831",
+  "status": true,
+  "message": "成功",
+  "result": {
+    "data": {
+      "recruitingChannel": {
+        "1": "STARLUX官方網站",
+        "2": "社群媒體",
+        "3": "104",
+        "4": "親戚/朋友",
+        "5": "其他"
+      },
+      "fileKinds": {
+        "1": "大頭照",
+        "2": "畢業證書",
+        "3": "成績單",
+        "4": "語言證照",
+        "5": "機師執照"
+      },
+      "gender": {
+        "1": "男",
+        "2": "女"
+      },
+      "militaryServiceStatus": {
+        "1": "役畢",
+        "2": "免役",
+        "3": "服役中"
+      },
+      "academicDegree": {
+        "1": "博士",
+        "2": "碩士",
+        "3": "學士",
+        "4": "專科"
+      },
+      "academicStatus": {
+        "1": "畢業",
+        "2": "肄業",
+        "3": "在學中"
+      },
+      "language": {
+        "1": "英語",
+        "2": "日語",
+        "3": "法語",
+        "4": "德語",
+        "5": "西班牙語",
+        "6": "其他"
+      },
+      "languageType": {
+        "1": "聽",
+        "2": "說",
+        "3": "讀",
+        "4": "寫"
+      },
+      "languageLicenses": {
+        "1": "多益",
+        "2": "雅思",
+        "3": "托福"
+      },
+      "level": {
+        "1": "精通",
+        "2": "中等",
+        "3": "略懂"
+      },
+      "freightLines": {
+        "1": "國內線",
+        "2": "國際線"
+      },
+      "questionsTypes": {
+        "1": "是非",
+        "2": "單選",
+        "3": "問答"
+      },
+      "status": {
+        "1": "應徵中",
+        "2": "考慮中",
+        "3": "邀請面試",
+        "4": "面試完成",
+        "5": "不合格",
+        "6": "申請任用",
+        "7": "新進人員"
+      }
     }
+  }
 }
 ```
 
@@ -1653,19 +1673,19 @@ images or download pdf
 
 ```json
 {
-    "version": "20180831",
-    "status": true,
-    "message": "OK",
-    "result": {
-        "count": 1,
-        "page": 1,
-        "rowPerPage": 10,
-        "data": {
-            "pilot": "飛行員",
-            "cabinCrew": "空服員",
-            "groundStaff": "地勤人員"
-        }
+  "version": "20180831",
+  "status": true,
+  "message": "OK",
+  "result": {
+    "count": 1,
+    "page": 1,
+    "rowPerPage": 10,
+    "data": {
+      "pilot": "飛行員",
+      "cabinCrew": "空服員",
+      "groundStaff": "地勤人員"
     }
+  }
 }
 ```
 
