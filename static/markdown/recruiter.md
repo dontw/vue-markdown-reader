@@ -578,31 +578,30 @@
   "status": true,
   "message": "成功",
   "result": {
-      "count": 1,
-      "page": 1,
-      "rowPerPage": 15,
-      "data": [
-          {
-            "id": 1,
-            "jobtypeId": 3,
-            "departmentId": 5,
-            "locationId": 1,
-            "name": "工程師",
-            "description": "<p>工程師</p>",
-            "conditions": "<p>工程師</p>",
-            "onBoardDate": "2018-09-30",
-            "numberOfRequire": 3,
-            "approved": "Y",
-            "deadline": null,
-            "createdAt": "2018-09-10 05:40:31",
-            "updatedAt": "2018-09-10 05:41:24",
-            "deletedAt": null
-          }
-      ]
+    "count": 1,
+    "page": 1,
+    "rowPerPage": 15,
+    "data": [
+      {
+        "id": 1,
+        "jobtypeId": 3,
+        "departmentId": 5,
+        "locationId": 1,
+        "name": "工程師",
+        "description": "<p>工程師</p>",
+        "conditions": "<p>工程師</p>",
+        "onBoardDate": "2018-09-30",
+        "numberOfRequire": 3,
+        "approved": "Y",
+        "deadline": null,
+        "createdAt": "2018-09-10 05:40:31",
+        "updatedAt": "2018-09-10 05:41:24",
+        "deletedAt": null
+      }
+    ]
   }
 }
 ```
-
 
 ## GET /jobs/:jobsName(urlencode)
 
@@ -623,28 +622,28 @@
 
 ```json
 {
-    "version": "20180831",
-    "status": true,
-    "message": "成功",
-    "result": {
-        "count": 1,
-        "data": {
-            "id": 1,
-            "jobtypeId": 3,
-            "departmentId": 5,
-            "locationId": 1,
-            "name": "工程師",
-            "description": "<p>工程師</p>",
-            "conditions": "<p>工程師</p>",
-            "onBoardDate": "2018-09-30",
-            "numberOfRequire": 3,
-            "approved": "Y",
-            "deadline": null,
-            "createdAt": "2018-09-10 05:40:31",
-            "updatedAt": "2018-09-10 05:41:24",
-            "deletedAt": null
-        }
+  "version": "20180831",
+  "status": true,
+  "message": "成功",
+  "result": {
+    "count": 1,
+    "data": {
+      "id": 1,
+      "jobtypeId": 3,
+      "departmentId": 5,
+      "locationId": 1,
+      "name": "工程師",
+      "description": "<p>工程師</p>",
+      "conditions": "<p>工程師</p>",
+      "onBoardDate": "2018-09-30",
+      "numberOfRequire": 3,
+      "approved": "Y",
+      "deadline": null,
+      "createdAt": "2018-09-10 05:40:31",
+      "updatedAt": "2018-09-10 05:41:24",
+      "deletedAt": null
     }
+  }
 }
 ```
 
@@ -685,15 +684,15 @@
   "status": true,
   "message": "成功",
   "result": {
-      "count": 1,
-      "data": [
-          {
-              "date": "2018-09-10 15:10:49",
-              "status": "應徵中",
-              "job": "工程師"
-          }
-      ]
-   }
+    "count": 1,
+    "data": [
+      {
+        "date": "2018-09-10 15:10:49",
+        "status": "應徵中",
+        "job": "工程師"
+      }
+    ]
+  }
 }
 ```
 
@@ -701,37 +700,622 @@
 
 ### Request [POST]
 
+> header
+
 ```json
 {
-    "jobId": 1,
-    "lastName": "王",
-    "firstName": "小明",
-    ...
-    ..
-    .
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "Accept-Language": "zh_TW", //or en
+  "Authorization": "Bearer [Token]"
 }
 ```
 
-### Response [GET]
+```json
+{
+  "jobIds": [2],
+  "lastName": "x",
+  "firstName": "xx",
+  "surname": "xxxx",
+  "mddleName": null,
+  "givenName": "xxxx",
+  "preferredName": "xxxx",
+  "mobile": "+886912345678",
+  "nationality": "Tawian",
+  "nationalIdNumber": "A223456789",
+  "passportNumber": "12345678",
+  "dateOfExpiration": "2020-09-01",
+  "recruitingChannel": 5,
+  "gender": 2,
+  "dateOfBirth": "1999-02-28",
+  "militaryServiceStatus": null,
+  "militaryServiceEndDate": null,
+  "expectedMonthlySalary": 2000,
+  "academicBackgrounds": [
+    {
+      "academicDegree": 1,
+      "institution": "xx大學",
+      "major": "IT",
+      "startDate": "2002-09-01",
+      "endDate": "2006-06-01",
+      "location": "Tawian",
+      "status": 1
+    },
+    {
+      "academicDegree": 3,
+      "institution": "xx高中",
+      "major": "xx",
+      "startDate": "1999-09-01",
+      "endDate": "2002-06-01",
+      "location": "Tawian",
+      "status": 1
+    }
+  ],
+  "workExperiences": [
+    {
+      "company": "xx公司",
+      "startDate": "2006-11-01",
+      "endDate": "2008-12-01",
+      "jobTitle": "Engineer",
+      "reasonForLeaving": "xxxxxx",
+      "jobDescription": "xxxxxx",
+      "isManagementResponsibility": false,
+      "salary": 30000,
+      "freightLines": 1,
+      "cabinOfService": "頭等"
+    },
+    {
+      "company": "xx公司",
+      "startDate": "2009-01-01",
+      "endDate": "2018-02-01",
+      "jobTitle": "Engineer",
+      "reasonForLeaving": "???",
+      "jobDescription": "xxxxxx",
+      "isManagementResponsibility": false,
+      "salary": null,
+      "freightLines": null,
+      "cabinOfService": null
+    }
+  ],
+  "references": [
+    {
+      "company": "xx公司",
+      "name": "xxx",
+      "jobTitle": "Engineer",
+      "mobile": "+886912345678",
+      "email": "xxx@xxx.xxx",
+      "relationship": "workmate"
+    },
+    {
+      "company": "xx公司",
+      "name": "ooo",
+      "jobTitle": "Engineer",
+      "mobile": "+886912345678",
+      "email": "xxx@xxx.xxx",
+      "relationship": "workmate"
+    }
+  ],
+  "languageSkills": [
+    {
+      "languageId": 1,
+      "languageTypeId": 1,
+      "level": 2
+    },
+    {
+      "languageId": 1,
+      "languageTypeId": 2,
+      "level": 2
+    },
+    {
+      "languageId": 1,
+      "languageTypeId": 3,
+      "level": 2
+    },
+    {
+      "languageId": 1,
+      "languageTypeId": 4,
+      "level": 2
+    }
+  ],
+  "languageLicenses": {
+    "TOEIC": {
+      "listening": 200,
+      "speaking": 200,
+      "reading": 200,
+      "writing": 200
+    },
+    "IELTS": 7.5,
+    "TOEFL": 120
+  },
+  "flightTrainingLicenses": [
+    {
+      "isFirstClassMedicalCertificate": true,
+      "flightHoursLogged": true,
+      "flightHours": 200,
+      "institutionOfTraining": "xxx",
+      "region": "xxx",
+      "startDate": "2002-09-01",
+      "endDate": "2008-09-01",
+      "isPPL": false,
+      "isIR": false,
+      "isCPL": false
+    }
+  ],
+  "recruitingQuesitons": [
+    {
+      "recruitingQuestionsId": 1,
+      "answer": "xxxxxx"
+    }
+  ]
+}
+```
+
+### Response
 
 `200`
 
 ```json
 {
-  "version": "20180831",
-  "status": true,
-  "message": "OK",
+  "status": 201,
+  "msgKey": "resumeSuccess",
   "result": {
     "count": 1,
     "page": 1,
     "rowPerPage": 10,
     "data": [
       {
-        "lastName": "小明",
-        "firstName": "王"
+        "id": 47,
+        "applicantId": "8412b2b0-b4d0-11e8-85ce-33efab09e2d3",
+        "lastName": "洪",
+        "firstName": "筱琪",
+        "surname": "HUNG",
+        "mddleName": null,
+        "givenName": "HSIAO CHI",
+        "preferredName": "Achi",
+        "mobile": "+886912345678",
+        "nationality": "Tawian",
+        "nationalIdNumber": "A223456789",
+        "passportNumber": "12345678",
+        "dateOfExpiration": "2020-09-01",
+        "recruitingChannel": 5,
+        "gender": 2,
+        "dateOfBirth": "1985-02-28",
+        "militaryServiceStatus": null,
+        "militaryServiceEndDate": null,
+        "expectedMonthlySalary": 2000,
+        "createdAt": "2018-09-11 03:37:15",
+        "updatedAt": "2018-09-11 03:37:15",
+        "academicBackgrounds": [
+          {
+            "id": 74,
+            "resumeId": 47,
+            "academicDegree": 3,
+            "institution": "xx高中",
+            "major": "xx",
+            "startDate": "1999-09-01",
+            "endDate": "2002-06-01",
+            "location": "Tawian",
+            "status": 1,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 73,
+            "resumeId": 47,
+            "academicDegree": 1,
+            "institution": "xx大學",
+            "major": "IT",
+            "startDate": "2002-09-01",
+            "endDate": "2006-06-01",
+            "location": "Tawian",
+            "status": 1,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "workExperiences": [
+          {
+            "id": 70,
+            "resumeId": 47,
+            "company": "xx公司",
+            "startDate": "2009-01-01",
+            "endDate": "2018-02-01",
+            "jobTitle": "Engineer",
+            "isManagementResponsibility": 0,
+            "salary": null,
+            "reasonForLeaving": "???",
+            "jobDescription": "xxxxxx",
+            "freightLines": null,
+            "cabinOfService": null,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 69,
+            "resumeId": 47,
+            "company": "xx公司",
+            "startDate": "2006-11-01",
+            "endDate": "2008-12-01",
+            "jobTitle": "Engineer",
+            "isManagementResponsibility": 0,
+            "salary": 30000,
+            "reasonForLeaving": "xxxxxx",
+            "jobDescription": "xxxxxx",
+            "freightLines": 1,
+            "cabinOfService": "頭等",
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "references": [
+          {
+            "id": 67,
+            "resumeId": 47,
+            "company": "xx公司",
+            "name": "xxx",
+            "jobTitle": "Engineer",
+            "mobile": "+886912345678",
+            "email": "xxx@xxx.xxx",
+            "relationship": "workmate",
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 68,
+            "resumeId": 47,
+            "company": "xx公司",
+            "name": "ooo",
+            "jobTitle": "Engineer",
+            "mobile": "+886912345678",
+            "email": "xxx@xxx.xxx",
+            "relationship": "workmate",
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "languageSkills": [
+          {
+            "id": 125,
+            "resumeId": 47,
+            "languageId": 1,
+            "languageTypeId": 1,
+            "level": 2,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 126,
+            "resumeId": 47,
+            "languageId": 1,
+            "languageTypeId": 2,
+            "level": 2,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 127,
+            "resumeId": 47,
+            "languageId": 1,
+            "languageTypeId": 3,
+            "level": 2,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 128,
+            "resumeId": 47,
+            "languageId": 1,
+            "languageTypeId": 4,
+            "level": 2,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "languageLicenses": {
+          "id": 14,
+          "resumeId": 47,
+          "name": "{\"IELTS\": 7.5, \"TOEFL\": 120, \"TOEIC\": {\"reading\": 200, \"writing\": 200, \"speaking\": 200, \"listening\": 200}}",
+          "createdAt": "2018-09-11 03:37:15",
+          "updatedAt": "2018-09-11 03:37:15"
+        },
+        "flightTrainingLicenses": [
+          {
+            "id": 8,
+            "resumeId": 47,
+            "isFirstClassMedicalCertificate": 1,
+            "flightHoursLogged": 1,
+            "flightHours": 200,
+            "institutionOfTraining": "xxx",
+            "region": "xxx",
+            "startDate": "2002-09-01",
+            "endDate": "2008-09-01",
+            "isPPL": 0,
+            "isIR": 0,
+            "isCPL": 0,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ]
       }
     ]
   }
+}
+```
+
+`400`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Bad request",
+  "result": null,
+  "error": {
+    "email": ["The email must be a valid email address."]
+  }
+}
+```
+
+`401`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Unauthorized",
+  "result": null
+}
+```
+
+`500`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Internal server error",
+  "result": null
+}
+```
+
+### Request [GET]
+
+> header
+
+```json
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "Accept-Language": "zh_TW", //or en
+  "Authorization": "Bearer [Token]"
+}
+```
+
+### Response
+
+`200`
+
+```json
+{
+  "status": 201,
+  "msgKey": "resumeSuccess",
+  "result": {
+    "count": 1,
+    "page": 1,
+    "rowPerPage": 10,
+    "data": [
+      {
+        "id": 47,
+        "applicantId": "8412b2b0-b4d0-11e8-85ce-33efab09e2d3",
+        "lastName": "洪",
+        "firstName": "筱琪",
+        "surname": "HUNG",
+        "mddleName": null,
+        "givenName": "HSIAO CHI",
+        "preferredName": "Achi",
+        "mobile": "+886912345678",
+        "nationality": "Tawian",
+        "nationalIdNumber": "A223456789",
+        "passportNumber": "12345678",
+        "dateOfExpiration": "2020-09-01",
+        "recruitingChannel": 5,
+        "gender": 2,
+        "dateOfBirth": "1985-02-28",
+        "militaryServiceStatus": null,
+        "militaryServiceEndDate": null,
+        "expectedMonthlySalary": 2000,
+        "createdAt": "2018-09-11 03:37:15",
+        "updatedAt": "2018-09-11 03:37:15",
+        "academicBackgrounds": [
+          {
+            "id": 74,
+            "resumeId": 47,
+            "academicDegree": 3,
+            "institution": "xx高中",
+            "major": "xx",
+            "startDate": "1999-09-01",
+            "endDate": "2002-06-01",
+            "location": "Tawian",
+            "status": 1,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 73,
+            "resumeId": 47,
+            "academicDegree": 1,
+            "institution": "xx大學",
+            "major": "IT",
+            "startDate": "2002-09-01",
+            "endDate": "2006-06-01",
+            "location": "Tawian",
+            "status": 1,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "workExperiences": [
+          {
+            "id": 70,
+            "resumeId": 47,
+            "company": "xx公司",
+            "startDate": "2009-01-01",
+            "endDate": "2018-02-01",
+            "jobTitle": "Engineer",
+            "isManagementResponsibility": 0,
+            "salary": null,
+            "reasonForLeaving": "???",
+            "jobDescription": "xxxxxx",
+            "freightLines": null,
+            "cabinOfService": null,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 69,
+            "resumeId": 47,
+            "company": "xx公司",
+            "startDate": "2006-11-01",
+            "endDate": "2008-12-01",
+            "jobTitle": "Engineer",
+            "isManagementResponsibility": 0,
+            "salary": 30000,
+            "reasonForLeaving": "xxxxxx",
+            "jobDescription": "xxxxxx",
+            "freightLines": 1,
+            "cabinOfService": "頭等",
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "references": [
+          {
+            "id": 67,
+            "resumeId": 47,
+            "company": "xx公司",
+            "name": "xxx",
+            "jobTitle": "Engineer",
+            "mobile": "+886912345678",
+            "email": "xxx@xxx.xxx",
+            "relationship": "workmate",
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 68,
+            "resumeId": 47,
+            "company": "xx公司",
+            "name": "ooo",
+            "jobTitle": "Engineer",
+            "mobile": "+886912345678",
+            "email": "xxx@xxx.xxx",
+            "relationship": "workmate",
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "languageSkills": [
+          {
+            "id": 125,
+            "resumeId": 47,
+            "languageId": 1,
+            "languageTypeId": 1,
+            "level": 2,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 126,
+            "resumeId": 47,
+            "languageId": 1,
+            "languageTypeId": 2,
+            "level": 2,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 127,
+            "resumeId": 47,
+            "languageId": 1,
+            "languageTypeId": 3,
+            "level": 2,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          },
+          {
+            "id": 128,
+            "resumeId": 47,
+            "languageId": 1,
+            "languageTypeId": 4,
+            "level": 2,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ],
+        "languageLicenses": {
+          "id": 14,
+          "resumeId": 47,
+          "name": "{\"IELTS\": 7.5, \"TOEFL\": 120, \"TOEIC\": {\"reading\": 200, \"writing\": 200, \"speaking\": 200, \"listening\": 200}}",
+          "createdAt": "2018-09-11 03:37:15",
+          "updatedAt": "2018-09-11 03:37:15"
+        },
+        "flightTrainingLicenses": [
+          {
+            "id": 8,
+            "resumeId": 47,
+            "isFirstClassMedicalCertificate": 1,
+            "flightHoursLogged": 1,
+            "flightHours": 200,
+            "institutionOfTraining": "xxx",
+            "region": "xxx",
+            "startDate": "2002-09-01",
+            "endDate": "2008-09-01",
+            "isPPL": 0,
+            "isIR": 0,
+            "isCPL": 0,
+            "createdAt": "2018-09-11 03:37:15",
+            "updatedAt": "2018-09-11 03:37:15"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+`400`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Bad request",
+  "result": null,
+  "error": {
+    "email": ["The email must be a valid email address."]
+  }
+}
+```
+
+`401`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Unauthorized",
+  "result": null
+}
+```
+
+`500`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Internal server error",
+  "result": null
 }
 ```
 
@@ -752,7 +1336,7 @@
 
 ```json
 {
-  "privacyId": {privacyId}
+  "privacyId": { privacyId }
 }
 ```
 
@@ -762,10 +1346,10 @@
 
 ```json
 {
-    "version": "20180831",
-    "status": true,
-    "message": "成功",
-    "result": null
+  "version": "20180831",
+  "status": true,
+  "message": "成功",
+  "result": null
 }
 ```
 
@@ -773,10 +1357,10 @@
 
 ```json
 {
-    "version": "20180831",
-    "status": false,
-    "message": "儲存隱私權資料失敗",
-    "result": null
+  "version": "20180831",
+  "status": false,
+  "message": "儲存隱私權資料失敗",
+  "result": null
 }
 ```
 
@@ -796,17 +1380,17 @@
 
 ```json
 {
-    "version": "20180831",
-    "status": true,
-    "message": "成功",
-    "result": {
-        "count": 1,
-        "data": {
-            "id": 1,
-            "content": "星宇航空十分重視您的個人隱私權，並遵守個人資料保護法及相關法令之要求，特制定本聲明，以協助您了解本公司網站如何蒐集、應用及保護您的個人資料。",
-            "createdAt": "2018-09-10 06:21:17",
-        }
+  "version": "20180831",
+  "status": true,
+  "message": "成功",
+  "result": {
+    "count": 1,
+    "data": {
+      "id": 1,
+      "content": "星宇航空十分重視您的個人隱私權，並遵守個人資料保護法及相關法令之要求，特制定本聲明，以協助您了解本公司網站如何蒐集、應用及保護您的個人資料。",
+      "createdAt": "2018-09-10 06:21:17"
     }
+  }
 }
 ```
 
@@ -827,8 +1411,8 @@
 
 ```json
 {
-  "file": {file},
-  "kind": {kindValue}
+  "file": { file },
+  "kind": { kindValue }
 }
 ```
 
@@ -838,10 +1422,10 @@
 
 ```json
 {
-    "version": "20180831",
-    "status": true,
-    "message": "成功",
-    "result": null
+  "version": "20180831",
+  "status": true,
+  "message": "成功",
+  "result": null
 }
 ```
 
@@ -851,8 +1435,8 @@
 {
   "version": 20180831,
   "status": false,
-  "message": "上傳檔案失敗", 
-  "result": null,
+  "message": "上傳檔案失敗",
+  "result": null
 }
 ```
 
@@ -863,7 +1447,7 @@
   "version": 20180831,
   "status": false,
   "message": "檔案大小已超過上限",
-  "result": null,
+  "result": null
 }
 ```
 
@@ -890,15 +1474,15 @@
   "status": true,
   "message": "成功",
   "result": {
-      "count": 1,
-      "data": [
-          {
-             "fileName": "phpr7oyok",
-             "kind": 1,
-             "type": "image/png"
-          }
-      ]
-   }
+    "count": 1,
+    "data": [
+      {
+        "fileName": "phpr7oyok",
+        "kind": 1,
+        "type": "image/png"
+      }
+    ]
+  }
 }
 ```
 
@@ -946,7 +1530,6 @@ images or download pdf
   "result": null
 }
 ```
-
 
 # Flow
 
