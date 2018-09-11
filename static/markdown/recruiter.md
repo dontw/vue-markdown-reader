@@ -1531,6 +1531,144 @@ images or download pdf
 }
 ```
 
+## GET /resume/allSelect
+
+### Request
+
+> header
+
+```json
+{
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+### Request
+
+`200`
+
+```json
+{
+    "version": "20180831",
+    "status": true,
+    "message": "成功",
+    "result": {
+        "data": {
+            "recruitingChannel": {
+                "1": "STARLUX官方網站",
+                "2": "社群媒體",
+                "3": "104",
+                "4": "親戚/朋友",
+                "5": "其他"
+            },
+            "fileKinds": {
+                "1": "大頭照",
+                "2": "畢業證書",
+                "3": "成績單",
+                "4": "語言證照",
+                "5": "機師執照"
+            },
+            "gender": {
+                "1": "男",
+                "2": "女"
+            },
+            "militaryServiceStatus": {
+                "1": "役畢",
+                "2": "免役",
+                "3": "服役中"
+            },
+            "academicDegree": {
+                "1": "博士",
+                "2": "碩士",
+                "3": "學士",
+                "4": "專科"
+            },
+            "academicStatus": {
+                "1": "畢業",
+                "2": "肄業",
+                "3": "在學中"
+            },
+            "language": {
+                "1": "英語",
+                "2": "日語",
+                "3": "法語",
+                "4": "德語",
+                "5": "西班牙語",
+                "6": "其他"
+            },
+            "languageType": {
+                "1": "聽",
+                "2": "說",
+                "3": "讀",
+                "4": "寫"
+            },
+            "languageLicenses": {
+                "1": "多益",
+                "2": "雅思",
+                "3": "托福"
+            },
+            "level": {
+                "1": "精通",
+                "2": "中等",
+                "3": "略懂"
+            },
+            "freightLines": {
+                "1": "國內線",
+                "2": "國際線"
+            },
+            "questionsTypes": {
+                "1": "是非",
+                "2": "單選",
+                "3": "問答"
+            },
+            "status": {
+                "1": "應徵中",
+                "2": "考慮中",
+                "3": "邀請面試",
+                "4": "面試完成",
+                "5": "不合格",
+                "6": "申請任用",
+                "7": "新進人員"
+            }
+        }
+    }
+}
+```
+
+## GET /jobTypes
+
+### Request
+
+> header
+
+```json
+{
+  "Accept-Language": "zh_TW" //or en
+}
+```
+
+### Request
+
+`200`
+
+```json
+{
+    "version": "20180831",
+    "status": true,
+    "message": "OK",
+    "result": {
+        "count": 1,
+        "page": 1,
+        "rowPerPage": 10,
+        "data": {
+            "pilot": "飛行員",
+            "cabinCrew": "空服員",
+            "groundStaff": "地勤人員"
+        }
+    }
+}
+```
+
 # Flow
 
 <iframe frameborder="0" style="width:100%;height:1593px;" src="https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#R5V1Zk6O2Fv41PLqLRQLxaNzuJFXJvVPpW8nMIzayzQw2Dsa95NdfCQRGi93YrO7pmao2stjO%2Bc5%2BpNas2fbtl8Tfb%2F6IAxxpph68adajZpIfCMkvOvKejyDTzgfWSRjkQ8Zp4Dn8F7NBnY0ewwAfuIlpHEdpuOcHl%2FFuh5cpN%2BYnSfzKT1vFEX%2FXvb%2FG0sDz0o%2Fk0b%2FDIN0Ub%2BGcxn%2FF4XpT3Nmw3fybhb%2F8sU7i447dTzOtVfaTf731i2uxFz1s%2FCB%2BrQxZc82aJXGc5p%2B2bzMcUdoWZMvPezrzbfncCd6ltU5A7JVe%2FOiIi2fOnix9L6hBX2jPpuEkxW8qHviLYrouP4RRvhqBDI63OE3eyRR2oYljsXMYXAzgsIHXE%2FVdxMY2VcoXd%2FMZx9fl1U9vTT6wF1cToWDeJRpkPMX0BF2zvNdNmOLnvb%2Bk374SGSBjm3RLbvBokI%2BrMIpmcRQn2bmWC20EPDJ%2BSJP4B658Y1oAQHJRT0GykjMiyWU69kKlgiUcleyI3MILwpfTRPufI0Wvl75OUj9Z43RCHj%2BdEJikfrjDyWkG%2BbRmv%2BteRj55ut9HlAbf48WhuBB5lexa%2FOXF0UYcJm%2Fz5G%2FDiCL2L5wE%2Fs6XGb%2BC9J%2BK8Xb205jxxbe8%2BFiy8JQIqMLCbgMVxihRccBpGu7WPysgBkWE%2BbE2xQExt%2BwwTtJNvI53fjQ%2FjXo88SuE%2Fk44%2B848Bv%2BYxmTodIXf43jP5l2g4yE%2BJkvMa7UcTTym6VNepHaCIz8NX3inoRHt0F3RDrZNJ3bqlzgkNy7RbAtoFlGa846dJBC7fIp69IcS%2Ff854kMaxjv67oVS%2BTyKAgypKOy7AnsRh1QVResCUJt2Kpc1t2qHvb8rbJq%2F3yfxC6XOU8XoVWfIYN7E28Xx8DGQW8GfKNqmjD%2BVQ4tagB9S2anhPRf%2B5CBMuLOjlLvfrRffAHEkx0QFCMWpVF9NXhntp2QK0HX5wn%2Fi71kc%2FnQJaeWwfPt6Dlpvblsr2EYD6lakcsvHq1tdWbcW4tm1c%2BE4fTkXrmzv%2FhNLXMkElyN2gg%2Fhvyy9Qvmwp8%2BSPR30NPhI1XwUrndkYEnITBSS5VGQhks%2FmrIvtmEQZByN%2FAWOvDJJVfU48jSVimclmOomf86KhP5AHBjA0Xti5Ye3srGYEq9WxD9ryCIDyA6gNkcaoYDnaHNH82aaN6UfpnNtatAPrq4huwYXqaZhEmO4F%2FxAMlzhylP203aeoKqBdIUGAi1oIEMHY1VBsgKCCufO0HvSQJYOOYkw3M5UkDna%2BFLmiQllnhQJ%2BP4dbmscBpUQLHn%2Fys7PDr7RgwcaKuK3MP3KHX1jE2%2Bnt92PCEygzlthR8xYtygDsoontiNchj6ZZftb6iHuFgf66xUvDsR9lBh9lYt5lvj19fYE2jx5kN6jL2lZo4B%2BPRA7Moit1vV4XcqZcnEtL1MMjSdrUDwpfKyx4qnADocnMJgRklMWBE%2FDw8kYEk4ql320cAIynMBg1QZL9tC9Y5rSXHeeaVkkZZZlbmsIaa5Bo6GpTQMiOuJoyNXmUPPmmgeb4VBMgPuBGygT4D4GBhEEFlGxuykaH5rD2Lb7hHGNJoSxwLhwC8fhmkNVY8IdUW44e2LKGakoXoe74S2K6KD0K4p35PAW1mOQqE1sM4BOZ1EbkG3VfSRPSzA1Tp5O9AcdAZuneH40iuQpqNFKOHCK5GaRgq07aWqRMnmBsvTuBEpOBX7Dcmg6Rok6l%2Fe%2BRaJMjt7miMTJHknGkWUVi8%2BVfGMpaKfDqzKOqqw77KmnaGIIGUcD1hO1aZL475VpDP5nb2SU1RS%2BwHgCRn7Fm%2BVYhknuw9FCvOjGNejtOCNzF6Ip4b1V9e%2BuejvccQRTFQkxbxQRVcKg8LI6L41DvjAFjW5E5Nx9ns4ZSfvi%2FMYiZRiyTD3jXXAPxrFEfivG0R6RPYRyBDAPQnqb2V%2Bypus5YLVdHpJWn80%2BUM6A%2BmxVxCH10%2BPwBQfDQIJjC3ukjz2ORtPm1sAe0hqc07rtO0y68j5DWQNbDpTuxRiUwG%2FDGEBgOxyhJ0Xismn%2Fi9gQZvJXaCeakq3HLME%2BLe6Pwn4I6lGx%2FrG7XtFxNGo1bF8pekg7V4NCv6gh8SB%2FKkkPyiGoJYSgqGbv6bUadSIYX6OAUu0nE89orFSR7LLcSfaplJY2dCqyihVfo3CxDX0cnlItgS%2F7M6veUKHmu9YCBuKdDqlltr1EraHLefX7KH2c4NSK%2F4GKdfojkZXR5ZhuCyqUcgR7kiNg9idHRbxyfzbnhLU2BMmGgsM9piJiicZqmueFrrLT5a4kmuUI2epG0YHvMdUtRqCmwnvvKtNtGDVa%2BisbuNR50atBJW7fIr8%2BhIr3N8Tq5k3JrxplsqbRXEnjq7Zi6e6dTVlGaBeeO9M8nX5AnjYFQ1JBvS%2BJYnFvZ0Gtqejhocu23Gz9lk1phR4zoll0IdfwtBqUWIoMAKERIZb7lLV3Im3acKFtKzQSdyvok0agzi5RXe%2BUJShaUFR7qgQo666cqWljSR9QbgHVBBXX73pxccG2guZc40jOQpm6FyrUroqaVhuWGyi3ThpXAHGR2kJsoKS10Fml2m0HoDNcaRpaCMsqnZq9VNdm14DB38dGl5NrhribDT%2B%2FeUPISDZgGh5XqBNcuUJ9CnRUB7sWV8jsGlcql0paBDIHmbvwKEdrUxatyYtLmtmQLiyC2t6WgV4vDoej8sqQRtiKrIzwkO5CcJ7eX%2FAuqOyBdw%2F0Ni3rQYilbeehJtGLNohmRB%2FHarLWFaSlUJA5wBooyPpUVdQV5q6GTIrmeRZdkJiVjLiP2jRDOYk9prYM3d92L9mCbP03mmh7CfHrPcEbOGdMRz%2F6ZPz9%2BeoacH8CYXfjMQjpMTF6uNphaLRIYxxbgJzn9CV8tI4CZUNVUxTUl0hFSkFWgvPMzqNZsQZXkQgvteF9uVe2mM%2FoVR%2BiGtmMezT1iiWmDGl9YFq181zuo7J8q05BTLOLOt1NS0Lrkx9GrWNYSDOhJV4uVWmmBYIAfhigNkQ9EpprYK9pTOW2lz%2BtF%2BAqZAV1tJpCZHuHi2WRuvrhEjm0Kv42OfTo%2F%2FyrKZLl7r%2BrVbbD6d2YFFG4ejYpI2mlrCFc8nq%2BfoTL6kS4oBhZdZTsdYRWSgAuJ%2BU%2BmN88KadopPwMTkzhRbSLnfpyrMpX2JprZwV2l2YtPFNWi7%2BGSQcOOO%2B8BD5GK6XzYi8RXqw61q%2BGfi793Y%2BCHX8Oo3VRUGUqUDeZCkMsToGaq6JvUl2KTAR1SaasRQO5LGQgh1NPJVbyhvf%2F8yOcvdCXOC7DCE29Efk9uDOOsDDE6XNhCKvMSvkJ4jHSjcDyWC4P6myaoqjFIS%2Fylz%2FINX8PD%2BknYBAU%2BIP65I9bw93MW1KuJ0KdZpUP890CdRTlM0tFnFY6I4FbwzVqYomxEUDsqCyxazuW37hbxT1TnumJeioXyKGFRvJcp7IvojVfD2R7owONxj%2BKsi%2B1FttML3fqGg3FEPXePWavm2C6CseImk6HOqo0g0w81kxnE6vrKTLIJAwJXzp3XgfmkLgKvWcWqSovsoFk3anTacYth%2F29AfRE%2ByvOWljBgtL1QfrzJm6%2FOjpqfhpGn%2F0Zyk1m1PxExGPK1CdRltQsiUxhfz6nLns%2FEw8lrdkfB8tN5z%2FkIKTyRywiYaWXFeEkTs383RIrCxefnoOyVu2Thaom2g%2BUqkukcV5sZKxoMsm0558420HlJ%2BSnOaBShYrlXxJth9yr5fJOBb3UcvO4pmnup5PuEqiPY%2BvcE4ecrkuIRZTZbrn9TJVDWC076e6vpEDFn2%2Bq9NwJLJXXzPKqaxfvsKDn2FD9lbMqHcoDpdM8j9DEBWQjp1opIjKohk4kh0lM%2F7jiiXPkZTd%2FxAGmM%2F4P"></iframe>
