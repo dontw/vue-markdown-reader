@@ -9,8 +9,9 @@
             </Sider>
             <Content :style="{padding: '12px', 'display':'flex','align-items':'center','justify-content':'center'}">
                 <Card shadow :style="{minHeight:'90.5vh', width:'100%', padding:'5px'}">
-                    <div v-if="contentList && toclistStatus" class="toc-btn" @click="toggleToc">⮞</div>
-                    <div v-if="contentList&& !toclistStatus" class="toc-btn" @click="toggleToc">⮜</div>
+                    <div v-if="contentList && toclistStatus" class="toc-btn--menu" @click="toggleToc" style="line-height:30px;">🗙</div>
+                    <div v-if="contentList&& !toclistStatus" class="toc-btn--menu" @click="toggleToc" style="font-size:25px;">≡</div>
+                    <div class="toc-btn--go-top" @click="goToTop">🡱</div>
                     <div v-if="contentList" v-html="contentList" class="toc list" :class="{'list--close':!toclistStatus}"></div>
                     <VueMarkdown
                       v-if="cardContent && navStatus ==='guides'"
@@ -99,6 +100,11 @@ export default {
     getTocHtml(val) {
       this.$store.commit('setTableContent', val);
     },
+
+    goToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    },
   },
 };
 </script>
@@ -114,16 +120,29 @@ export default {
   border: 1px solid #ccc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
+  height: 80%;
+  overflow-y: scroll;
 
   &--close {
     right: -330px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
   }
 }
 
 .toc-btn {
   position: fixed;
-  right: 30px;
-  top: 60px;
   background-color: #41b883;
   text-align: center;
   cursor: pointer;
@@ -133,6 +152,19 @@ export default {
   height: 30px;
   z-index: 1;
   line-height: 32px;
+
+  &--menu {
+    &:extend(.toc-btn);
+    top: 60px;
+    right: 30px;
+  }
+
+  &--go-top {
+    &:extend(.toc-btn);
+    bottom: 15px;
+    right: 30px;
+    background-color: #41b883;
+  }
 }
 
 .iframe {

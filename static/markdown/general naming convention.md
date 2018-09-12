@@ -25,6 +25,12 @@
 - **Train case 火車式**
   - example: `THIS-IS-TRAIN-CASE`
 
+## URL
+小駝峰
+```
+e.g. http://localhost/api/v1/getPhoto
+```
+
 ## variable
 
 一般 variable - 小駝峰
@@ -61,6 +67,11 @@ snake case 蛇式
 
 > brian_big_boob
 
+> Foreign key: 單數Table name_id
+
+```
+e.g. user_id
+```
 ## spacing
 
 > php: 4
