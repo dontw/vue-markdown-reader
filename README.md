@@ -1,6 +1,6 @@
 # Console Frontend
 
-> 拿來看md文檔或外連文檔的一個頁面
+> 拿來看 md 文檔或外連文檔的一個頁面
 
 ## Build Setup ok
 
@@ -14,4 +14,4 @@ $ npm run dev
 # build for production and launch server
 $ npm run build
 $ npm start
-
+```
