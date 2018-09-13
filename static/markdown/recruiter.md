@@ -555,7 +555,7 @@
 }
 ```
 
-## GET /jobs?jobType={kind}
+## GET /job?jobType={kind}
 
 ### Request
 
