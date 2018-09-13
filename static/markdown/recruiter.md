@@ -38,8 +38,8 @@
       {
         "id": "e13d2a40-b4bf-11e8-8310-0d3197c3f8bb",
         "email": "achihung@starlux-airlines.com",
-        "updatedAt": "2018-09-10 06:08:04",
-        "createdAt": "2018-09-10 06:08:04"
+        "updatedAt": "2018/09/10 06:08:04",
+        "createdAt": "2018/09/10 06:08:04"
       }
     ]
   }
@@ -309,8 +309,8 @@
         "isTalentPool": 0,
         "isBlackList": 0,
         "memo": null,
-        "createdAt": "2018-09-10 06:15:08",
-        "updatedAt": "2018-09-10 06:15:08"
+        "createdAt": "2018/09/10 06:15:08",
+        "updatedAt": "2018/09/10 06:15:08"
       }
     ]
   }
@@ -383,8 +383,8 @@
         "isTalentPool": 0,
         "isBlackList": 0,
         "memo": null,
-        "createdAt": "2018-09-10 06:15:08",
-        "updatedAt": "2018-09-10 06:19:38"
+        "createdAt": "2018/09/10 06:15:08",
+        "updatedAt": "2018/09/10 06:19:38"
       }
     ]
   }
@@ -594,8 +594,8 @@
         "numberOfRequire": 3,
         "approved": "Y",
         "deadline": null,
-        "createdAt": "2018-09-10 05:40:31",
-        "updatedAt": "2018-09-10 05:41:24",
+        "createdAt": "2018/09/10 05:40:31",
+        "updatedAt": "2018/09/10 05:41:24",
         "deletedAt": null
       }
     ]
@@ -639,8 +639,8 @@
       "numberOfRequire": 3,
       "approved": "Y",
       "deadline": null,
-      "createdAt": "2018-09-10 05:40:31",
-      "updatedAt": "2018-09-10 05:41:24",
+      "createdAt": "2018/09/10 05:40:31",
+      "updatedAt": "2018/09/10 05:41:24",
       "deletedAt": null
     }
   }
@@ -687,7 +687,7 @@
     "count": 1,
     "data": [
       {
-        "date": "2018-09-10 15:10:49",
+        "date": "2018/09/10 15:10:49",
         "status": "應徵中",
         "job": "工程師"
       }
@@ -727,7 +727,7 @@
   "dateOfExpiration": "2020-09-01",
   "recruitingChannel": 5,
   "gender": 2,
-  "dateOfBirth": "1999-02-28",
+  "dateOfBirth": "1999/02/28",
   "militaryServiceStatus": null,
   "militaryServiceEndDate": null,
   "expectedMonthlySalary": 2000,
@@ -736,8 +736,8 @@
       "academicDegree": 1,
       "institution": "xx大學",
       "major": "IT",
-      "startDate": "2002-09-01",
-      "endDate": "2006-06-01",
+      "startDate": "2002/09/01",
+      "endDate": "2006/06/01",
       "location": "Tawian",
       "status": 1
     },
@@ -745,8 +745,8 @@
       "academicDegree": 3,
       "institution": "xx高中",
       "major": "xx",
-      "startDate": "1999-09-01",
-      "endDate": "2002-06-01",
+      "startDate": "1999/09/01",
+      "endDate": "2002/06/01",
       "location": "Tawian",
       "status": 1
     }
@@ -754,8 +754,8 @@
   "workExperiences": [
     {
       "company": "xx公司",
-      "startDate": "2006-11-01",
-      "endDate": "2008-12-01",
+      "startDate": "2006/11/01",
+      "endDate": "2008/12/01",
       "jobTitle": "Engineer",
       "reasonForLeaving": "xxxxxx",
       "jobDescription": "xxxxxx",
@@ -834,8 +834,8 @@
       "flightHours": 200,
       "institutionOfTraining": "xxx",
       "region": "xxx",
-      "startDate": "2002-09-01",
-      "endDate": "2008-09-01",
+      "startDate": "2002/09/01",
+      "endDate": "2008/09/01",
       "isPPL": false,
       "isIR": false,
       "isCPL": false
@@ -876,15 +876,15 @@
         "nationality": "Tawian",
         "nationalIdNumber": "A223456789",
         "passportNumber": "12345678",
-        "dateOfExpiration": "2020-09-01",
+        "dateOfExpiration": "2020/09/01",
         "recruitingChannel": 5,
         "gender": 2,
         "dateOfBirth": "1985-02-28",
         "militaryServiceStatus": null,
         "militaryServiceEndDate": null,
         "expectedMonthlySalary": 2000,
-        "createdAt": "2018-09-11 03:37:15",
-        "updatedAt": "2018-09-11 03:37:15",
+        "createdAt": "2018/09/11 03:37:15",
+        "updatedAt": "2018/09/11 03:37:15",
         "academicBackgrounds": [
           {
             "id": 74,
@@ -892,12 +892,12 @@
             "academicDegree": 3,
             "institution": "xx高中",
             "major": "xx",
-            "startDate": "1999-09-01",
-            "endDate": "2002-06-01",
+            "startDate": "1999/09/01",
+            "endDate": "2002/06/01",
             "location": "Tawian",
             "status": 1,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 73,
@@ -905,12 +905,12 @@
             "academicDegree": 1,
             "institution": "xx大學",
             "major": "IT",
-            "startDate": "2002-09-01",
-            "endDate": "2006-06-01",
+            "startDate": "2002/09/01",
+            "endDate": "2006/06/01",
             "location": "Tawian",
             "status": 1,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "workExperiences": [
@@ -918,8 +918,8 @@
             "id": 70,
             "resumeId": 47,
             "company": "xx公司",
-            "startDate": "2009-01-01",
-            "endDate": "2018-02-01",
+            "startDate": "2009/01/01",
+            "endDate": "2018/02/01",
             "jobTitle": "Engineer",
             "isManagementResponsibility": 0,
             "salary": null,
@@ -927,15 +927,15 @@
             "jobDescription": "xxxxxx",
             "freightLines": null,
             "cabinOfService": null,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 69,
             "resumeId": 47,
             "company": "xx公司",
-            "startDate": "2006-11-01",
-            "endDate": "2008-12-01",
+            "startDate": "2006/11/01",
+            "endDate": "2008/12/01",
             "jobTitle": "Engineer",
             "isManagementResponsibility": 0,
             "salary": 30000,
@@ -943,8 +943,8 @@
             "jobDescription": "xxxxxx",
             "freightLines": 1,
             "cabinOfService": "頭等",
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "references": [
@@ -957,8 +957,8 @@
             "mobile": "+886912345678",
             "email": "xxx@xxx.xxx",
             "relationship": "workmate",
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 68,
@@ -969,8 +969,8 @@
             "mobile": "+886912345678",
             "email": "xxx@xxx.xxx",
             "relationship": "workmate",
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "languageSkills": [
@@ -980,8 +980,8 @@
             "languageId": 1,
             "languageTypeId": 1,
             "level": 2,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 126,
@@ -989,8 +989,8 @@
             "languageId": 1,
             "languageTypeId": 2,
             "level": 2,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 127,
@@ -998,8 +998,8 @@
             "languageId": 1,
             "languageTypeId": 3,
             "level": 2,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 128,
@@ -1007,16 +1007,16 @@
             "languageId": 1,
             "languageTypeId": 4,
             "level": 2,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "languageLicenses": {
           "id": 14,
           "resumeId": 47,
           "name": "{\"IELTS\": 7.5, \"TOEFL\": 120, \"TOEIC\": {\"reading\": 200, \"writing\": 200, \"speaking\": 200, \"listening\": 200}}",
-          "createdAt": "2018-09-11 03:37:15",
-          "updatedAt": "2018-09-11 03:37:15"
+          "createdAt": "2018/09/11 03:37:15",
+          "updatedAt": "2018/09/11 03:37:15"
         },
         "flightTrainingLicenses": [
           {
@@ -1027,13 +1027,13 @@
             "flightHours": 200,
             "institutionOfTraining": "xxx",
             "region": "xxx",
-            "startDate": "2002-09-01",
-            "endDate": "2008-09-01",
+            "startDate": "2002/09/01",
+            "endDate": "2008/09/01",
             "isPPL": 0,
             "isIR": 0,
             "isCPL": 0,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "recruitingAnswers": [
@@ -1042,8 +1042,8 @@
             "resumeId": 13,
             "recruitingQuesitonId": 21,
             "answer": "xxxxxx",
-            "createdAt": "2018-09-11 09:02:27",
-            "updatedAt": "2018-09-11 09:02:27"
+            "createdAt": "2018/09/11 09:02:27",
+            "updatedAt": "2018/09/11 09:02:27"
           }
         ]
       }
@@ -1127,15 +1127,15 @@
         "nationality": "Tawian",
         "nationalIdNumber": "A223456789",
         "passportNumber": "12345678",
-        "dateOfExpiration": "2020-09-01",
+        "dateOfExpiration": "2020/09/01",
         "recruitingChannel": 5,
         "gender": 2,
-        "dateOfBirth": "1985-02-28",
+        "dateOfBirth": "1985/02/28",
         "militaryServiceStatus": null,
         "militaryServiceEndDate": null,
         "expectedMonthlySalary": 2000,
-        "createdAt": "2018-09-11 03:37:15",
-        "updatedAt": "2018-09-11 03:37:15",
+        "createdAt": "2018/09/11 03:37:15",
+        "updatedAt": "2018/09/11 03:37:15",
         "academicBackgrounds": [
           {
             "id": 74,
@@ -1143,12 +1143,12 @@
             "academicDegree": 3,
             "institution": "xx高中",
             "major": "xx",
-            "startDate": "1999-09-01",
-            "endDate": "2002-06-01",
+            "startDate": "1999/09/01",
+            "endDate": "2002/06/01",
             "location": "Tawian",
             "status": 1,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 73,
@@ -1156,12 +1156,12 @@
             "academicDegree": 1,
             "institution": "xx大學",
             "major": "IT",
-            "startDate": "2002-09-01",
-            "endDate": "2006-06-01",
+            "startDate": "2002/09/01",
+            "endDate": "2006/06/01",
             "location": "Tawian",
             "status": 1,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "workExperiences": [
@@ -1169,8 +1169,8 @@
             "id": 70,
             "resumeId": 47,
             "company": "xx公司",
-            "startDate": "2009-01-01",
-            "endDate": "2018-02-01",
+            "startDate": "2009/01/01",
+            "endDate": "2018/02/01",
             "jobTitle": "Engineer",
             "isManagementResponsibility": 0,
             "salary": null,
@@ -1178,14 +1178,14 @@
             "jobDescription": "xxxxxx",
             "freightLines": null,
             "cabinOfService": null,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 69,
             "resumeId": 47,
             "company": "xx公司",
-            "startDate": "2006-11-01",
+            "startDate": "2006/11/01",
             "endDate": "2008-12-01",
             "jobTitle": "Engineer",
             "isManagementResponsibility": 0,
@@ -1194,8 +1194,8 @@
             "jobDescription": "xxxxxx",
             "freightLines": 1,
             "cabinOfService": "頭等",
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "references": [
@@ -1208,8 +1208,8 @@
             "mobile": "+886912345678",
             "email": "xxx@xxx.xxx",
             "relationship": "workmate",
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 68,
@@ -1220,8 +1220,8 @@
             "mobile": "+886912345678",
             "email": "xxx@xxx.xxx",
             "relationship": "workmate",
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "languageSkills": [
@@ -1231,8 +1231,8 @@
             "languageId": 1,
             "languageTypeId": 1,
             "level": 2,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 126,
@@ -1240,8 +1240,8 @@
             "languageId": 1,
             "languageTypeId": 2,
             "level": 2,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 127,
@@ -1249,8 +1249,8 @@
             "languageId": 1,
             "languageTypeId": 3,
             "level": 2,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           },
           {
             "id": 128,
@@ -1258,16 +1258,16 @@
             "languageId": 1,
             "languageTypeId": 4,
             "level": 2,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "languageLicenses": {
           "id": 14,
           "resumeId": 47,
           "name": "{\"IELTS\": 7.5, \"TOEFL\": 120, \"TOEIC\": {\"reading\": 200, \"writing\": 200, \"speaking\": 200, \"listening\": 200}}",
-          "createdAt": "2018-09-11 03:37:15",
-          "updatedAt": "2018-09-11 03:37:15"
+          "createdAt": "2018/09/11 03:37:15",
+          "updatedAt": "2018/09/11 03:37:15"
         },
         "flightTrainingLicenses": [
           {
@@ -1278,13 +1278,13 @@
             "flightHours": 200,
             "institutionOfTraining": "xxx",
             "region": "xxx",
-            "startDate": "2002-09-01",
-            "endDate": "2008-09-01",
+            "startDate": "2002/09/01",
+            "endDate": "2008/09/01",
             "isPPL": 0,
             "isIR": 0,
             "isCPL": 0,
-            "createdAt": "2018-09-11 03:37:15",
-            "updatedAt": "2018-09-11 03:37:15"
+            "createdAt": "2018/09/11 03:37:15",
+            "updatedAt": "2018/09/11 03:37:15"
           }
         ],
         "recruitingAnswers": [
@@ -1293,8 +1293,8 @@
             "resumeId": 13,
             "recruitingQuesitonId": 21,
             "answer": "xxxxxx",
-            "createdAt": "2018-09-11 09:02:27",
-            "updatedAt": "2018-09-11 09:02:27"
+            "createdAt": "2018/09/11 09:02:27",
+            "updatedAt": "2018/09/11 09:02:27"
           }
         ]
       }
@@ -1407,8 +1407,8 @@
     "count": 1,
     "data": {
       "id": 1,
-      "content": "星宇航空十分重視您的個人隱私權，並遵守個人資料保護法及相關法令之要求，特制定本聲明，以協助您了解本公司網站如何蒐集、應用及保護您的個人資料。",
-      "createdAt": "2018-09-10 06:21:17"
+      "content": "本隱私權政策將解釋我們如何收集和使用您的個人資訊。本隱私權政策適用於當您搭乘我們的航班、購買或使用我們的服務、瀏覽我們的網站、使用我們的移動應用程式或以其他方式與我們互動時，我們處理有關您的所有個人資訊。本公司所取得關於您的個人資料，除事先經您本人同意或依照相關法律規定，本公司不會將這些個人資料提供給任何第三人，或移作其他目的使用。由於科技發展的迅速，本公司將會視需要修改網站上所提供的隱私權保護說明，以落實並保障您隱私權益。我們慎重對待你的隱私，並竭力保護你的個人資訊。我們的隱私通知會解釋我們進行商務活動時，如何蒐集、使用和分享個人資訊。為了協助你找到尋找的東西，我們將資訊分為不同區段。這些區段提供了關於我們的一般資訊，以及本隱私通知適用的方式。",
+      "createdAt": "2018/09/10 06:21:17"
     }
   }
 }
