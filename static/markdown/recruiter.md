@@ -596,14 +596,16 @@
         "deadline": null,
         "createdAt": "2018/09/10 05:40:31",
         "updatedAt": "2018/09/10 05:41:24",
-        "deletedAt": null
+        "deletedAt": null,
+        "url": "http://c0246:8000/storage/job-management/September2018/bSumyFpdJWwUZrQsw6xd.pdf",
+        "fileName": "file_name.pdf"
       }
     ]
   }
 }
 ```
 
-## GET /jobs/:jobsName(urlencode)
+## GET /job/:jobsName(urlencode)
 
 ### Request
 
@@ -641,7 +643,9 @@
       "deadline": null,
       "createdAt": "2018/09/10 05:40:31",
       "updatedAt": "2018/09/10 05:41:24",
-      "deletedAt": null
+      "deletedAt": null,
+      "url": "http://c0246:8000/storage/job-management/September2018/bSumyFpdJWwUZrQsw6xd.pdf",
+      "fileName": "file_name.pdf"
     }
   }
 }
