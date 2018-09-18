@@ -14,6 +14,7 @@
                     <div class="toc-btn--go-top" @click="goToTop">🡱</div>
                     <div v-if="contentList" v-html="contentList" class="toc list" :class="{'list--close':!toclistStatus}"></div>
                     <VueMarkdown
+                      ref="markdown"
                       v-if="cardContent && navStatus ==='guides'"
                       class="markdown-body"
                       lang-prefix="language-"
@@ -34,6 +35,11 @@
 <script>
 import AppNav from '~/components/AppNav';
 import AppMenu from '~/components/AppMenu';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-json.min';
+import 'prismjs/components/prism-scss.min';
+import 'prismjs/components/prism-css.min';
+import 'prismjs/components/prism-bash.min';
 
 export default {
   components: {
@@ -54,6 +60,14 @@ export default {
       if (!this.isObjectEmpty(this.$route.query)) {
         this.$store.commit('setSiderItems', this.$route.query);
         this.$store.dispatch('getContent', this.$route.query.name);
+      }
+    });
+  },
+
+  updated() {
+    this.$nextTick(() => {
+      if (this.$refs.markdown) {
+        Prism.highlightAll();
       }
     });
   },
@@ -109,6 +123,7 @@ export default {
 };
 </script>
 <style lang="less">
+@import '../assets/style/_var.less';
 .list {
   width: 300px;
   position: fixed;
@@ -120,7 +135,7 @@ export default {
   border: 1px solid #ccc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
-  height: 80%;
+  max-height: 80%;
   overflow-y: scroll;
 
   &--close {
@@ -143,7 +158,7 @@ export default {
 
 .toc-btn {
   position: fixed;
-  background-color: #41b883;
+  background-color: @primary-color;
   text-align: center;
   cursor: pointer;
   color: white;
@@ -163,7 +178,7 @@ export default {
     &:extend(.toc-btn);
     bottom: 15px;
     right: 30px;
-    background-color: #41b883;
+    background-color: @primary-color;
   }
 }
 

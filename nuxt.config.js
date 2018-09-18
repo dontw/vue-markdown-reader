@@ -1,5 +1,4 @@
 const ENV_SETTING = require('./env_setting.js');
-console.log('env_setting', ENV_SETTING[process.env.NODE_ENV].NUXT_HOST);
 module.exports = {
   mode: 'spa',
   //Headers of the page
@@ -16,6 +15,10 @@ module.exports = {
   // Gloabal Style
   css: [
     {
+      src: '~/node_modules/prismjs/themes/prism-tomorrow.css',
+      lang: 'css',
+    },
+    {
       src: '@assets/style/index.less',
       lang: 'less',
     },
@@ -28,7 +31,7 @@ module.exports = {
   modules: ['@nuxtjs/axios'],
 
   //Customize the progress bar color
-  loading: { color: '#3B8070' },
+  loading: { color: '#60B5B5' },
 
   //Build configuration
   build: {

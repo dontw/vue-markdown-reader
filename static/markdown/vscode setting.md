@@ -1,4 +1,4 @@
-# Front End Code Style
+# Vscode Setting
 
 ## 概要
 
@@ -14,7 +14,7 @@ vscode formatter  ->  prettier formatter  ->  es linter
 
 ## vscode 設定
 
-```lang
+```json
   //不要顯示已開啟的編輯器
   "explorer.openEditors.visible": 0,
   //側欄位置
@@ -65,7 +65,7 @@ trim_trailing_whitespace = false
 
 ## prettier
 
-```lang
+```json
 {
   "eslintIntegration": true,
   "stylelintIntegration": true,
@@ -84,7 +84,7 @@ trim_trailing_whitespace = false
 
 ## eslint
 
-```lang=javascript
+```javascript
 module.exports = {
   root: true,
   env: {
@@ -110,7 +110,7 @@ module.exports = {
 
 ## stylelint
 
-```lang
+```json
 {
   "extends": "stylelint-config-recommended",
   "rules": {

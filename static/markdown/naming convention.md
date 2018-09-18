@@ -1,4 +1,4 @@
-# General Naming Convention 通用命名規則
+# Naming Convention 命名規則
 
 ## Naming Style 命名風格
 
@@ -26,8 +26,10 @@
   - example: `THIS-IS-TRAIN-CASE`
 
 ## URL
+
 小駝峰
-```
+
+```bash
 e.g. http://localhost/api/v1/getPhoto
 ```
 
@@ -35,13 +37,13 @@ e.g. http://localhost/api/v1/getPhoto
 
 一般 variable - 小駝峰
 
-```lang=javascript
-var brianBoobSize = "big";
+```javascript
+var brianBoobSize = 'big';
 ```
 
 常數 const - 火車式
 
-```lang=javascript
+```javascript
 const BRIAN_BOOB_NUM = 2;
 ```
 
@@ -49,10 +51,10 @@ const BRIAN_BOOB_NUM = 2;
 
 lower camel case 小駝峰
 
-```lang=javascript
-function isBrainBigBoob(){
+```javascript
+function isBrainBigBoob() {
   //...
-};
+}
 ```
 
 ## table name
@@ -67,11 +69,12 @@ snake case 蛇式
 
 > brian_big_boob
 
-> Foreign key: 單數Table name_id
+> Foreign key: 單數 Table name_id
 
-```
+```bash
 e.g. user_id
 ```
+
 ## spacing
 
 > php: 4

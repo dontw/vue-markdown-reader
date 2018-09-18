@@ -1,9 +1,3 @@
 {
-  "names": [
-    "general naming convention",
-    "front-End Code Style",
-    "colors",
-    "scss",
-    "recruiter"
-  ]
+  "names": ["naming convention", "vscode setting", "colors", "recruiter"]
 }

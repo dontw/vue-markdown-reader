@@ -37,6 +37,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+@import '../assets/style/_var';
 .layout-logo {
   float: left;
   position: relative;
@@ -44,7 +45,7 @@ export default {
   left: 20px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #41b883;
+  color: @primary-color;
 }
 .layout-nav {
   float: right;
