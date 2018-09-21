@@ -1,9 +1,9 @@
 module.exports = {
   development: {
     PROTOCAL: 'http',
-    HOST: '10.20.43.99',
+    HOST: '10.20.43.148',
     PORT: '9488',
-    NUXT_HOST: '10.20.43.99',
+    NUXT_HOST: '10.20.43.148',
     NUXT_PORT: '9488',
     API_HOST: '10.20.43.121',
     API_PORT: '3000',
