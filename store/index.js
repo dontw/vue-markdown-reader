@@ -1,3 +1,9 @@
+const NUXT_HOST = process.env.NUXT_HOST;
+const NUXT_PORT = process.env.NUXT_PORT;
+const API_HOST = process.env.API_HOST;
+const API_PORT = process.env.API_PORT;
+const PROTOCAL = process.env.PROTOCAL;
+
 export const state = () => ({
   navStatus: null, //String
   siderItems: { data: [], type: null }, //Object
@@ -15,7 +21,6 @@ export const getters = {
         type: 'tree',
       };
     }
-
     return state.siderItems;
   },
 };
@@ -59,7 +64,7 @@ export const actions = {
 
     if (navStatusName === 'guides') {
       this.$axios
-        .$get('/markdown/mdconfig.json')
+        .$get(`${PROTOCAL}://${NUXT_HOST}:${NUXT_PORT}/markdown/mdconfig.json`)
         .then((res) => {
           commit('setSiderItems', { data: res.names, type: 'md' });
           commit(
@@ -73,16 +78,17 @@ export const actions = {
     }
 
     if (navStatusName === 'apis') {
-      this.$axios.$get(process.env.API_URL + 'API').then((res) => {
-        commit('setSiderItems', {
-          data: res,
-          type: 'tree',
+      this.$axios
+        .$get(`${PROTOCAL}://${API_HOST}:${API_PORT}/console/api/catalog/api`)
+        .then((res) => {
+          commit('setSiderItems', {
+            data: res,
+            type: 'tree',
+          });
         });
-      });
     }
 
     if (navStatusName === 'home') {
-      console.log('honme');
       commit('clearSiderItems');
     }
   },
@@ -91,7 +97,9 @@ export const actions = {
     commit('clearCardContent');
     if (state.siderItems.type === 'md') {
       this.$axios
-        .$get(`/markdown/${siderItemName}.md`)
+        .$get(
+          `${PROTOCAL}://${NUXT_HOST}:${NUXT_PORT}/markdown/${siderItemName}.md`,
+        )
         .then((res) => {
           commit('setCardContent', res);
         })

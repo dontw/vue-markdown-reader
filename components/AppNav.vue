@@ -1,7 +1,7 @@
 <template>
     <Menu mode="horizontal" theme="light" active-name="guides" class="menu" @on-select="emitItem">
           <div class="layout-logo">
-            <Icon type="md-code" size="32" style="padding-bottom:5px;"/>
+            <img src="/icon_120x120.png" alt="icon">
             Starlux Console
           </div>
           <div class="layout-nav">
@@ -13,7 +13,7 @@
                 <Icon type="md-cog" />
                 API Websites
             </i-menuItem>
-            <i-menuItem name="gitlab" to="http://git.starlux-airlines.com/" target="_blank">
+            <i-menuItem name="gitlab" to="http://gitlab.starlux-airlines.com/" target="_blank">
               <Icon type="md-git-network" />
               Git Lab
             </i-menuItem>
@@ -37,6 +37,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+@import '../assets/style/_var';
 .layout-logo {
   float: left;
   position: relative;
@@ -44,11 +45,18 @@ export default {
   left: 20px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #41b883;
+  color: @primary-color;
 }
 .layout-nav {
   float: right;
   margin-right: 20px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-bottom: 3px;
 }
 </style>
 
