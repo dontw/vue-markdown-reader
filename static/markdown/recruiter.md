@@ -1693,7 +1693,7 @@ images or download pdf
 }
 ```
 
-## POST /applicants/:applicantId/updateTag
+## POST /applicants/updateTag
 
 ### Request
 
@@ -1710,6 +1710,7 @@ images or download pdf
 
 ```json
 {
+  "applicants": [ "68dbabf0-baeb-11e8-a720-dfc57e81d220", "3b241101-e2bb-4255-8caf-4136c566a962" ],
   "isTalentPool": false,
   "isBlackList": true,
   "memo": "You are a good person."
