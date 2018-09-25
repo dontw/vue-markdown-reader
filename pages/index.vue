@@ -9,9 +9,13 @@
             </Sider>
             <Content :style="{padding: '12px', 'display':'flex','align-items':'center','justify-content':'center'}">
                 <Card shadow :style="{minHeight:'90.5vh', width:'100%', padding:'5px'}">
-                    <div v-if="contentList && toclistStatus" class="toc-btn--menu" @click="toggleToc" style="line-height:30px;">🗙</div>
-                    <div v-if="contentList&& !toclistStatus" class="toc-btn--menu" @click="toggleToc" style="font-size:25px;">≡</div>
-                    <div class="toc-btn--go-top" @click="goToTop">🡱</div>
+                    <div v-if="contentList && toclistStatus" class="toc-btn--menu" @click="toggleToc">
+                      <img src="~/assets/multiply.png" alt="multiply_image">
+                    </div>
+                    <div v-if="contentList&& !toclistStatus" class="toc-btn--menu" @click="toggleToc" style="font-size:25px; line-height:30px;">≡</div>
+                    <div class="toc-btn--go-top" @click="goToTop">
+                      <img src="~/assets/up_arrow.png" alt="up_image">
+                    </div>
                     <div v-if="contentList" v-html="contentList" class="toc list" :class="{'list--close':!toclistStatus}"></div>
                     <VueMarkdown
                       ref="markdown"
@@ -172,6 +176,11 @@ export default {
     &:extend(.toc-btn);
     top: 60px;
     right: 30px;
+    line-height: 3.2;
+    img {
+      width: 80%;
+      height: 80%;
+    }
   }
 
   &--go-top {
@@ -179,6 +188,11 @@ export default {
     bottom: 15px;
     right: 30px;
     background-color: @primary-color;
+    line-height: 3.2;
+    img {
+      width: 80%;
+      height: 80%;
+    }
   }
 }
 
