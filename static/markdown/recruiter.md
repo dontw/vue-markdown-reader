@@ -1775,8 +1775,8 @@ images or download pdf
   "ids": [1, 2, 3, 4, 5],
   "interviewStartTime": "2018-09-21 10:00:00",
   "interviewEndTime": "2018-09-21 10:01:00",
-  "meetingRoom": "somewhere",
-  "interviewQuestionId": 1,
+  "meetingRoom": "somewhere", //主管點選候選人時不用傳
+  "interviewQuestionId": 1, //主管點選候選人時不用傳
   "memo": "我不想面試",
   "examiners": [
     {
@@ -1815,6 +1815,37 @@ images or download pdf
       "updated_at": "2018-09-20 22:12:10"
     }
   }
+}
+```
+## POST /status/cancelCandidate
+
+> header
+
+```json
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json"
+}
+```
+
+### Request
+
+```json
+{
+  "ids": [1,2,3,4,5]
+}
+```
+
+### Response
+
+`201`
+
+```json
+{
+    "version": "20180831",
+    "status": true,
+    "message": "Cancel Candidate Success",
+    "result": null
 }
 ```
 
