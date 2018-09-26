@@ -1701,7 +1701,6 @@ images or download pdf
 
 ```json
 {
-  "Authorization": "Bearer [Token]",
   "Accept-Language": "zh_TW" //or en
 }
 ```
@@ -1710,12 +1709,12 @@ images or download pdf
 
 ```json
 {
-  "applicants": [
-    "68dbabf0-baeb-11e8-a720-dfc57e81d220",
-    "3b241101-e2bb-4255-8caf-4136c566a962"
-  ],
+  "applicants": [ "68dbabf0-baeb-11e8-a720-dfc57e81d220", "3b241101-e2bb-4255-8caf-4136c566a962" ],
+  "desiredPositions": [ "1", "2" ],
   "isTalentPool": false,
   "isBlackList": true,
+  "isConsider": true,
+  "isCandidate": false,
   "memo": "You are a good person."
 }
 ```
@@ -1730,6 +1729,17 @@ images or download pdf
   "status": true,
   "message": "updateTagSuccess",
   "result": null
+}
+```
+
+`400`
+
+```json
+{
+    "version": "20180831",
+    "status": false,
+    "message": "Missing required parameters: desiredPositions",
+    "result": null
 }
 ```
 
