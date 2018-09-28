@@ -1709,8 +1709,11 @@ images or download pdf
 
 ```json
 {
-  "applicants": [ "68dbabf0-baeb-11e8-a720-dfc57e81d220", "3b241101-e2bb-4255-8caf-4136c566a962" ],
-  "desiredPositions": [ "1", "2" ],
+  "applicants": [
+    "68dbabf0-baeb-11e8-a720-dfc57e81d220",
+    "3b241101-e2bb-4255-8caf-4136c566a962"
+  ],
+  "desiredPositions": ["1", "2"],
   "isTalentPool": false,
   "isBlackList": true,
   "isConsider": true,
@@ -1736,10 +1739,10 @@ images or download pdf
 
 ```json
 {
-    "version": "20180831",
-    "status": false,
-    "message": "Missing required parameters: desiredPositions",
-    "result": null
+  "version": "20180831",
+  "status": false,
+  "message": "Missing required parameters: desiredPositions",
+  "result": null
 }
 ```
 
@@ -1753,7 +1756,7 @@ images or download pdf
 
 # apply status
 
-<iframe frameborder="0" style="width:100%;height:803px;" src="https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#R5Vtbc5s4FP41ekzGXATSIzhO05nubqbZ2W4fFZBtGow8mNz21%2B8RCJuLbJPYYKdJMykcCRDfd66SQNZ48fIlZcv5HyLkMTJH4QuyrpBpGrZJ4D8peVUSSnEhmaVRqGQbwV30H1fCkZI%2BRiFf1TpmQsRZtKwLA5EkPMhqMpam4rnebSri%2BlOXbMZbgruAxW3pjyjM5oWUmO5GfsOj2bx8suHQouWeBQ%2BzVDwm6nnItKb5T9G8YOW91Iuu5iwUzxWRNUHWOBUiK44WL2MeS3BL2Irrrre0rsed8iTrdIF6oycWP%2FJyyPnAstcSjPx1uLxghCz%2FeR5l%2FG7JAtn6DPyDbJ4tYjgz4HAaxfFYxCLNr7WmWP4D%2BSpLxQOvtDj5j7xCJNk1W0SxVJZ%2FeBqyhIG4%2FSbq5Z54mvGXiki92RcuFjxLX6GLanUUyGstVOfPG0qprWTzCp0WUUKm1Gi2vvUGSjhQaOqRJc5%2BZHkIWqdORZrNxUwkLJ5spH4d%2BwrOv3iWvSrDYY%2BZANHmDt%2BEWKp%2B%2FCXK%2FpWXX7pYnf4sqdoFvBzaVp1SopV4TAPVi9jKTFk64yWOWE9PymOWRU%2F1%2B%2BuwVpfeigievKYVE1zj9cJp0FWMQV3VYGw9jE4krnXuxCQmMOKCRVye%2FlS3e6v5VEkrrb9KmoG1CnB0Fm2nzqLTkUUvTdlrpdtSdljteI7beI7d8IiN%2FoY72tUfDooRvFulrM%2BnUtYwKkVJnTrLPQ%2BVIqRflbLPQqMO0RpTEzyOrTNdA7eJzwLOjYHWzPMS14L6m2L620koE%2Fm%2BLdfAjVTNPtRyDwn6bf4nDiIuIhRNMPInyMdoYiOfIA9anRjA8u9TOJrJI2%2B5jCNgvtXQ0qK3Jda9pcm0jv3aACppsmFq0uRmwH6XsdHzMLatBrXLDA8xNmsIY%2BvKgiYlmRAEUYtYuepj5E12aPwtT8IomX0cjTepdVkP4abpXnZUe4wPB5x0KLuHTQLNWha43Sb25odvLRxLra9aQlFMHhplegkO5DwcVu8UHFy7d44ARON8KCKm9D%2FghTwfEV9K6BXycr%2FkUeQ5bWfzNXkCdwJ3%2BppkPH2K%2BPPHcUjY2lK5DBKDz80ZbU94jaonOjwG47be02PHYH3C6zQJ72n2g9j159ijPaXq7v4Hl6qWxtrPVNeOW1zpdM0dRtfcxjz42tkcf77U0tTObdc9yfNJMs5zS4Jk%2FdF25sqHf6RCyqEn9OLl0tk5JyZ7bEQzdXh0d9wVTk1MLAogciX1F5gGzQX99UbIH7dV9JpF8dEVt7G0RgIeBEiztHZPsI3fM5HbXdVJw6fYZEhV18zQnFkQOcQMaNsMDGOYUGE0Vz9so7dYoSmkJi6iYGRWJe%2BHU1%2F%2BFk0eaRvVX9MpTz9OkGhazrBBQrOeCU6MOsgf5VUXeDOzjeVNlPYQh%2BvuLGScTLXuzAkIv5%2F2Soox2rZ0NAgruvk3UHxP%2FsociaqoA6dgFhoeCslqyZJS9jeLeW7Zt0KsIxEMpNrnAxmNWafHtYakR5%2FUglOiRpkLFEmBI%2FPaTvT4MQse4J7folX24dkxjAY79oDsODqXtqXkoKRHCFt4aVDdDqHbhHBABDXplGbBq1gQwOeKYKP2uihD3SAIth34zfdzBcq0T4mUZq%2BCcqHFdIAlVUxaqymP5TB8%2BXdTe5V5oDRtOC5WqmietjTwBoiyOqj11CIRCW%2FkIUrE4miWwGnA5TQECCTgUcBiTzUsojDMiwgdi3Wee%2FQZDbd70dXtmkcgknSYyJMbYZfvgEDt6mX35Y1Gb4UGN6DRLGlbWmSOsvOzw36cQzJlboSYu7pMmTquxfbuqd2jdAWzbWgHwc7SV4XelbT6TVAiMiL5tmyCvxJwzS4MWaMu8iS418LlRHSU3ryh6KMBUy9blzgAL670xtKHQzWZZ8jwDr5mktdL0%2Bip98LytPwY5JQE6faatouRfApgjDwv58rNq06ws2uZ%2BW2tZhrVyp8CnnM3F8dfdD1nNg1jwL1Sti6u6Nkkfp4ZudJNyk9vmpR857%2FkZzNdyf2NGGz5ywH5020s1fGHpe1RRxLp5ytkLZ7GLAm4doHhd%2Bev7U%2BHI9DRfdKzx51SsMRJXqwAk5pdK7nf%2FM6XANUnZNM8oTul7eylsnPok9WSDm7bke7TuHeUjnC6%2BZ6xWCfafDVqTf4H"></iframe>
+<iframe frameborder="0" style="width:100%;height:793px;" src="https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#R7Vtbc5s4FP41PHYHEBfpERx325nubqfZWx8VkG1ajLyYxMn%2B%2BpWEuEpOSWwwbjfNpHAEQpzvOzdJGGCxffw5x7vNLzQmqWGb8aMBbgzbtjwPsv%2B45ElKkOOUknWexFLWCG6Tf4kUmlJ6n8Rk37mwoDQtkl1XGNEsI1HRkeE8p4fuZSuadp%2B6w2uiCG4jnKrSv5K42JRSaPuN%2FB1J1pvqyZaHypY7HH1d5%2FQ%2Bk88zbLASP2XzFld9yRfdb3BMDy0RWBpgkVNalEfbxwVJuXIrtZX3vT3SWo87J1kx5Abklnc84PSeVEMWAyueKmWQmOlGntK82NA1zXC6bKSheGHCuzTZ2abYpuzQYodfSFE8SXjxfUGZqOnhA6U7eV35TP6go%2B9h1dphtCN0S4r8iV2SkxQXyUP3PizhX9fX1bd%2BpAnr0TYlV10ggZBMdX3Q7WJP7%2FOIyLvaiux1ZLndjnzQ66jA%2BZoUSkdBnuOn1mU7fsF%2B%2BIA913zRuHrXs4NyBNVZS7mNSJDmCIH8qyIQG5cAVIrk4Ets5AuBUYj2xu7iAKA5C37U4xiJH9YAfnTRP2ySgtzusADpwAJMlxGrJE0XNKW5uBesXP6PyfdFTr%2BSVosnfvgdNCve4m2S8lf8k%2BQxznBNGQ1DHkhekMeWSCWDbPW6urOQPD80MQM5UrZpxQsF%2FDZ%2FWqp%2FVrPQm4Xlkcek%2BJvf%2FpPvytPPFVQvVHzbNKGjmiZwtWZ%2Bdlt1qqgocX3jDbPVV5hHzbkLg5ixEZcoutXpZ9ndERQb3Puwv9r1WlPh63Xx9QbiO7Yv9kb2xTb4n2wN2cA0ZEM9UIE%2FD7LBsck2j8qiIVuHajWP9Kw6JXLZKtdsOA3X%2Bsm%2B5ZzKtVNCm4r%2F0jOgb0BkLF0jXBqhaywdI4RGwFq9lCkrvMvZ0ZofBbtdmkRMGzRTGxUmvSyFHC0hRF3910bQSggtW5MQ9gPQa%2FJBjXNfQoNZOQRC8a4RLJ%2FRdyXZ73BWyRY02ycxyas2NoR289Xi4gM1Udfi4rqn4wLnUSG3oq7dCbvWUU%2F4TEAe5gmh6gqrvP7MrnAUDwbRLJA7NwTnL6OGmkI1mo6PQga0uZtizioIDRhyCboxAuG%2BAmQEnupn3mcPSXFlscFxjiSCUwQHe25O6Hg2ZrU9kGg5xQAqsnem%2BKbJxrxeRg5GKjNhj1iO%2BY3M%2F%2FnrT878gcbKZ8q182b%2BOq7503DN701F1tXg%2BaesgKawU132UqSbcCFST2jwBKzvqBd0u0vJdTlxz7ygE69WR684H9EtuFwqG9GExLI8gjecvoyyjLiMvoFphAuVon9k%2F9zjNFklTJfn5m9vjQNGJIp0axx30HXc16TpwxkPe57FgVMyXjOJMLNQcoo1INUaLGuagGFZfg9Xa7SIoSmjlr6BmK2BVtbPTkP%2BWzYFUDWq31arZi5i%2FrGibznTxgrNwhLzZcgzQlPUXMyp2aou3yX56O4sxgSutO7MiyC5W40KimUem4%2BfBBXdJB0jfsB%2FeaaEZPBhp4F2fk2dpPsdp0RY9kdK06ufqYO9fRKDp%2BrOAo8%2BtWVOCVlVSlDmBh7PbgfBE6Y4%2Bsr6%2FJDsi6tHx7skOp7OpR0pPBCcqwr7cdd3JtSgJp3SrMmUqwbuXDXYm8x%2FU4W6STSoOvB3n%2BaqKNu5pKYcDddKF1pOCgBOMW6tNj%2Fmwwj536YEq%2FJAbtrsuFzOQiJt6emb6aPoKrWbWmQ0I708RIpYAbfO2GnEtMxySxBy7SYRTgPZsE3iWBQROhS7OI%2FoM6wekM5At2ufAUg4YDqPb3nenUMF9ZZufFf1bT6rGqcXkTQrrkCrmbNswdNw%2FJyZMrFil%2Fi6TBl5PsAv2txYw%2Fht1k2iO6CvCoMbbvVNUII8IoUOb2J%2FucI1GwV4jboVSfCohcuF4Ki8eY%2Fo5oSpl6NLHBguPvfG3IezalJkyOy1Qs1Ub5DnycPoheVl8bHgJQHSbe1TixExBbAwgkBg5Yuqk9nZW575Ha1metXKr5Q953ZDDz8UmpY14VYeRxdX9GjCUGRGPneTfNtyH5JP5Av%2FQGoouN8Rgoq%2FnBA%2F3d5HHX4utz3kcSBDsU6mLpLhLCLpj4if6k%2BnA9DTfVvxDXeKmCUuRbHCkNTsWRF%2B8xPZMVX9gGjaF3SnSM1e3vNy7yEhB0XF33st6XqqHem%2BUTpH6Yh0090un11CSCxCWLzWryfAh%2B1JxVmcxLggc5hM1dSvA75ZrT69UyZTB9rEK3alstPmo%2BJyCa%2F5dBss%2FwM%3D"></iframe>
 
 # Backend api
 
@@ -1817,6 +1820,7 @@ images or download pdf
   }
 }
 ```
+
 ## POST /status/cancelCandidate
 
 > header
@@ -1832,7 +1836,7 @@ images or download pdf
 
 ```json
 {
-  "ids": [1,2,3,4,5]
+  "ids": [1, 2, 3, 4, 5]
 }
 ```
 
@@ -1842,10 +1846,10 @@ images or download pdf
 
 ```json
 {
-    "version": "20180831",
-    "status": true,
-    "message": "Cancel Candidate Success",
-    "result": null
+  "version": "20180831",
+  "status": true,
+  "message": "Cancel Candidate Success",
+  "result": null
 }
 ```
 
