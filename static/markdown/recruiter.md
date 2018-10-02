@@ -555,7 +555,7 @@
 }
 ```
 
-## GET /jobs?jobType={kind}
+## GET /jobs?jobTypeKey={key}&name={jobName}
 
 ### Request
 
@@ -597,15 +597,29 @@
         "createdAt": "2018/09/10 05:40:31",
         "updatedAt": "2018/09/10 05:41:24",
         "deletedAt": null,
+        "needRegistration": 0,
         "url": "http://c0246:8000/storage/job-management/September2018/bSumyFpdJWwUZrQsw6xd.pdf",
-        "fileName": "file_name.pdf"
+        "fileName": "file_name.pdf",
+        "jobTypes": {
+          "id": 1,
+          "key": "pilot",
+          "name": "飛行員"
+        },
+        "department": {
+          "id": 12,
+          "name": "航務處"
+        },
+        "location": {
+          "id": 1,
+          "name": "台北市"
+        }
       }
     ]
   }
 }
 ```
 
-## GET /job/:jobsName(urlencode)
+## GET /jobName/:jobsName(urlencode) or /jobId/:jobId
 
 ### Request
 
@@ -644,8 +658,22 @@
       "createdAt": "2018/09/10 05:40:31",
       "updatedAt": "2018/09/10 05:41:24",
       "deletedAt": null,
+      "needRegistration": 0,
       "url": "http://c0246:8000/storage/job-management/September2018/bSumyFpdJWwUZrQsw6xd.pdf",
-      "fileName": "file_name.pdf"
+      "fileName": "file_name.pdf",
+      "jobTypes": {
+        "id": 1,
+        "key": "pilot",
+        "name": "飛行員"
+      },
+      "department": {
+        "id": 12,
+        "name": "航務處"
+      },
+      "location": {
+        "id": 1,
+        "name": "台北市"
+      }
     }
   }
 }
@@ -1304,6 +1332,126 @@
       }
     ]
   }
+}
+```
+
+`400`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Bad request",
+  "result": null,
+  "error": {
+    "email": ["The email must be a valid email address."]
+  }
+}
+```
+
+`401`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Unauthorized",
+  "result": null
+}
+```
+
+`500`
+
+```json
+{
+  "version": 20180831,
+  "status": false,
+  "message": "Internal server error",
+  "result": null
+}
+```
+
+## GET /resume/question/:jobId
+
+### Request
+
+> header
+
+```json
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "Accept-Language": "zh_TW", //or en
+  "Authorization": "Bearer [Token]"
+}
+```
+
+### Response
+
+`200`
+
+```json
+{
+  "version": "20180831",
+  "status": true,
+  "message": "OK",
+  "result": [
+    {
+      "id": 1,
+      "jobId": 1,
+      "questions": "What is your definition of \"Pilot\"?",
+      "createdAt": "2018/09/27 05:35:27",
+      "updatedAt": "2018/09/27 05:35:27",
+      "job": {
+        "id": 1,
+        "name": "培訓飛航員"
+      }
+    },
+    {
+      "id": 2,
+      "jobId": 1,
+      "questions": "What are your expectations of STARLUX?",
+      "createdAt": "2018/09/27 05:35:27",
+      "updatedAt": "2018/09/27 05:35:27",
+      "job": {
+        "id": 1,
+        "name": "培訓飛航員"
+      }
+    },
+    {
+      "id": 3,
+      "jobId": 1,
+      "questions": "What characteristics and skills do you think a pilot should have?",
+      "createdAt": "2018/09/27 05:35:27",
+      "updatedAt": "2018/09/27 05:35:27",
+      "job": {
+        "id": 1,
+        "name": "培訓飛航員"
+      }
+    },
+    {
+      "id": 4,
+      "jobId": 1,
+      "questions": "To what degree do you think you meet the qualification above?",
+      "createdAt": "2018/09/27 05:35:27",
+      "updatedAt": "2018/09/27 05:35:27",
+      "job": {
+        "id": 1,
+        "name": "培訓飛航員"
+      }
+    },
+    {
+      "id": 5,
+      "jobId": 1,
+      "questions": "What makes you believe you could be a pilot?",
+      "createdAt": "2018/09/27 05:35:27",
+      "updatedAt": "2018/09/27 05:35:27",
+      "job": {
+        "id": 1,
+        "name": "培訓飛航員"
+      }
+    }
+  ]
 }
 ```
 
