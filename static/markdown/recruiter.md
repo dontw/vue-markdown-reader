@@ -1849,7 +1849,9 @@ images or download pdf
 
 ```json
 {
-  "Accept-Language": "zh_TW" //or en
+  "Content-Type": "application/json",
+  "Accept-Language": "zh_TW", //or en
+  "X-CSRF-TOKEN": "T1hyxuJRvKD6xH61MTcZoyw7ZFfH0zvFXWcQ2PZq"
 }
 ```
 
@@ -1857,10 +1859,6 @@ images or download pdf
 
 ```json
 {
-  "applicants": [
-    "68dbabf0-baeb-11e8-a720-dfc57e81d220",
-    "3b241101-e2bb-4255-8caf-4136c566a962"
-  ],
   "desiredPositions": ["1", "2"],
   "isTalentPool": false,
   "isBlackList": true,
