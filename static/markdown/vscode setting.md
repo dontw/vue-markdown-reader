@@ -119,7 +119,11 @@ module.exports = {
     "declaration-no-important": true,
     "declaration-block-single-line-max-declarations": 1,
     "max-empty-lines": 2,
-    "selector-max-id": 1
+    "selector-max-id": 1,
+    //將原本 @at-rule 偵錯功能關掉，要不然會無法辨識 sass 的 @at-rule
+    "at-rule-no-unknown": null,
+    //啟用偵測 sass 的 @at-rule
+    "scss/at-rule-no-unknown": true
   }
 }
 ```

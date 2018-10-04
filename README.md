@@ -49,7 +49,7 @@ $ npm start
 | chalk            | terminal 上色套件         | [Github](https://github.com/chalk/chalk)                      |
 | git-markdown-css | github markdown style     | [Github](https://github.com/sindresorhus/github-markdown-css) |
 | iview            | vue 組件                  | [官方文檔](hhttps://www.iviewui.com/docs/guide/install)       |
-| ｜nuxt           | vue 框架                  | [官方文檔](https://nuxtjs.org/guide)                          |
+| nuxt             | vue 框架                  | [官方文檔](https://nuxtjs.org/guide)                          |
 | prismjs          | syntax highliter          | [官方文檔](https://prismjs.com/#basic-usage)                  |
 | vue-markdown     | markdown to html vue 組件 | [官方文檔](http://miaolz123.github.io/vue-markdown/)          |
 

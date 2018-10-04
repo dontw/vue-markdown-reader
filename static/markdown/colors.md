@@ -1,15 +1,25 @@
-# Colors 暫時用企業配色
+# Colors 企業配色
 
 ## 主色
 
-<div style="background-color:#95684B; height:50px; color:white; margin-bottom:5px;"> #95684B rgb(149,104,75) </div>
+<div style="display:inline-block; background-color:#8B634B; color:white; margin-bottom:5px; margin-right:5px; padding:15px;">
+<span style="font-weight:bold; background-color:#fff; color:black;">PANTONE 876 C</span>
+  <div>#8B634B</div>
+  <div>rgb(139,99,75)</div>
+</div>
 
-<div style="background-color:#84754C; height:50px; color:white; margin-bottom:5px;" > #84754C rgb(132,117,76)</div>
+<div style="display:inline-block; background-color:#84754E; color:white; margin-bottom:5px; margin-right:5px; padding:15px;">
+<span style="font-weight:bold; background-color:#fff; color:black;">PANTONE 871 C</span>
+  <div>#84754E </div>
+  <div>rgb(132,117,78)</div>
+</div>
 
-<div style="background-color:#40454B; height:50px; color:white; margin-bottom:5px;"> #40454B rgb(64,69,75)</div>
+<div style="display:inline-block; background-color:#41474B; color:white; margin-bottom:5px; margin-right:5px; padding:15px;">
+<span style="font-weight:bold; background-color:#fff; color:black;">PANTONE 10393 C</span>
+  <div>#41474B</div>
+  <div>rgb(65,71,75)</div>
+</div>
 
-## 相反色
+## 輔助色
 
-<div style="background-color:#60B5B5; height:50px; color:white; margin-bottom:5px;">#60B5B5 rgb(96,181,181)</div>
-
-<div style="background-color:#6C89D4; height:50px; color:white; margin-bottom:5px;">#6C89D4 rgb(108,137,212)</div>
+> TODO
