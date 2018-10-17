@@ -111,8 +111,10 @@ module.exports = {
 ## stylelint
 
 ```json
+//! remember isntall node module: stylint, stylelint-scss
 {
   "extends": "stylelint-config-recommended",
+  "plugins": ["stylelint-scss"],
   "rules": {
     "max-nesting-depth": 3,
     "selector-max-class": 3,
